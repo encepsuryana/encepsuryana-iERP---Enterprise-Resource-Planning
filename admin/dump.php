@@ -50,6 +50,6 @@ $get_id = $_GET['id'];
 </div>
 <?php 
 mysql_query("update tbl_assets set dev_status='Dump' where id = '$get_id'")or die(mysql_error());
-mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Dump Device $dev_name Inventory Code:$dev_serial')")or die(mysql_error());						
+mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Dump Device $dev_name Inventory Code:$dev_serial')")or die(mysql_error());						
 header('location:damage.php');
 ?>	

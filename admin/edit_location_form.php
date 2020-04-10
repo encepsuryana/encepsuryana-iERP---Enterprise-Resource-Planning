@@ -46,7 +46,7 @@ $stdev_location_name = $_POST['stdev_location_name'];
 
 mysql_query("update tbl_location set stdev_location_name = '$stdev_location_name' where id_location = '$get_id' ")or die(mysql_error());
 
-mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Edit location $stdev_location_name')")or die(mysql_error());
+mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Edit location $stdev_location_name')")or die(mysql_error());
 ?>
 
 <script>

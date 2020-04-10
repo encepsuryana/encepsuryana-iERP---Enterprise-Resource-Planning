@@ -113,7 +113,7 @@
 								<?php
 							}else{
 								mysql_query("insert into tbl_assets (id_asset,dev_desc,dev_serial,dev_brand,dev_model,dev_status) values('$id_asset','$dev_desc','$dev_serial','$dev_brand','$dev_model','$dev_status')")or die(mysql_error());
-								mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Add device Detail id $id_asset')")or die(mysql_error());											
+								mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Add device Detail id $id_asset')")or die(mysql_error());											
 								?>
 								<script>
 									window.location = "device_stocks.php";

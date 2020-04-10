@@ -103,7 +103,7 @@
 													id_location = '$id_location'													
 													where id = '$get_id' ")or die(mysql_error());
 													
-										mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','transfer Device  $dev_name to location id $id_location')")or die(mysql_error());			
+										mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','transfer Device  $dev_name to location id $id_location')")or die(mysql_error());			
 										?>
 										<script>
 										window.location = "mydevice.php<?php echo '?id_location='.$id_location; ?>"; 

@@ -68,7 +68,7 @@ if (isset($_POST['update'])){
 
   mysql_query("update client set username = '$username'  , firstname = '$firstname' , lastname = '$lastname' where client_id = '$get_id' ")or die(mysql_error());
 
-  mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Edit Client User $firstname')")or die(mysql_error());	
+  mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Edit Client User $firstname')")or die(mysql_error());	
   ?>
   <script>
     window.location = "client_user.php";

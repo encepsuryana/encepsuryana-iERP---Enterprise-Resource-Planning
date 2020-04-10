@@ -51,7 +51,7 @@ $dev_name = $_POST['dev_name'];
 
 mysql_query("update tbl_asset_type set dev_name = '$dev_name'  where id_asset = '$get_id' ")or die(mysql_error());
 
-mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Edit Device Type $dev_name')")or die(mysql_error());	
+mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Edit Device Type $dev_name')")or die(mysql_error());	
 ?>
 <script>
   window.location = "dev_name.php";

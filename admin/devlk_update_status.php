@@ -95,7 +95,7 @@
 													dev_status = '$dev_status'
 													where id = '$get_id' ")or die(mysql_error());
 													
-										mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Update Status $dev_name to $dev_status')")or die(mysql_error());			
+										mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Update Status $dev_name to $dev_status')")or die(mysql_error());			
 										?>
 										<script>
 										window.location = "mykeyboard.php<?php echo '?id_location='.$id_location; ?>"; 

@@ -50,7 +50,7 @@ if (isset($_POST['save'])){
 
     mysql_query("insert into tbl_asset_type (dev_name) values('$dev_name')")or die(mysql_error());
 
-    mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Add device Type $dev_name')")or die(mysql_error());
+    mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Add device Type $dev_name')")or die(mysql_error());
     ?>
     <script>
       window.location = "dev_name.php";

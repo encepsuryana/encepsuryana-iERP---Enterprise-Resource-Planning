@@ -71,7 +71,7 @@ if (isset($_POST['save'])){
   }else{
     mysql_query("insert into client (username,password,firstname,lastname,thumbnails) values('$username','$password','$firstname','$lastname','images/NO-IMAGE-AVAILABLE.jpg')")or die(mysql_error());
 
-    mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Add Client User $firstname')")or die(mysql_error());
+    mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Add Client User $firstname')")or die(mysql_error());
     ?>
     <script>
       window.location = "client_user.php";

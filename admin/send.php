@@ -24,7 +24,7 @@
 	$oras = strtotime("now");
 	$ora = date("Y-m-d",$oras);
     mysql_query("insert tbl_location_details (id,id_location,date_deployment) values('$id[$i]','$id_location','$ora')")or die(mysql_error());
-	mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Assign Device id $id[$i] to location id $id_location')")or die(mysql_error());		
+	mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Assign Device id $id[$i] to location id $id_location')")or die(mysql_error());		
     }
     header("location: device_location.php");
     }  

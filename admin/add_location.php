@@ -53,7 +53,7 @@ alert('Location Name Already Exist');
 }else{
 mysql_query("insert into tbl_location (stdev_location_name,thumbnails) values('$stdev_location_name','images/thumbnails.jpg')")or die(mysql_error());
 
-mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Add location $stdev_location_name')")or die(mysql_error());
+mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Add location $stdev_location_name')")or die(mysql_error());
 ?>
 <script>
 $.jGrowl("Location Successfully added", { header: 'Location add' });

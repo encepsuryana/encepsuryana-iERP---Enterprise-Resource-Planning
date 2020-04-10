@@ -133,7 +133,7 @@
 									dev_status = '$dev_status'
 									where id = '$get_id' ")or die(mysql_error());
 
-								mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Edit device info $dev_name')")or die(mysql_error());
+								mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Edit device info $dev_name')")or die(mysql_error());
 								?>
 								<script>										
 									window.location = "device_stocks.php";
