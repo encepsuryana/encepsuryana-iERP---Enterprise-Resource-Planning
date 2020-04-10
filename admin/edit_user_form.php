@@ -1,5 +1,5 @@
    <div class="row-fluid">
-     <a href="admin_user.php" class="btn btn-info" id="add" data-placement="right" title="Click to Add System User" ><i class="icon-plus-sign icon-large"></i> Add System user</a>
+     <a href="admin_user.php" class="btn btn-info" id="add" data-placement="right" title="Click to Add User Admin" ><i class="icon-plus-sign icon-large"></i> Add User Admin</a>
      <script type="text/javascript">
        $(document).ready(function(){
          $('#add').tooltip('show');
@@ -9,7 +9,7 @@
      <!-- block -->
      <div class="block">
       <div class="navbar navbar-inner block-header">
-        <div class="muted pull-left"><i class="icon-pencil icon-large"></i> Edit System User</div>
+        <div class="muted pull-left"><i class="icon-pencil icon-large"></i> Edit User Admin</div>
       </div>
       <div class="block-content collapse in">
         <div class="span12">
@@ -63,11 +63,11 @@
 
 
   mysql_query("update tbl_admin set user_admin = '$user_admin'  , firstnm_admin = '$firstnm_admin' , lastnm_admin = '$lastnm_admin' where id_admin = '$get_id' ")or die(mysql_error());
-  mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Edit system User $firstnm_admin')")or die(mysql_error());	
+  mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Edit User Admin $firstnm_admin')")or die(mysql_error());	
   ?>
   <script>
     window.location = "admin_user.php"; 
-    $.jGrowl("System User Successfully Update", { header: 'System User Update' });
+    $.jGrowl("User Admin Successfully Update", { header: 'User Admin Update' });
   </script>
   <?php
 }

@@ -67,11 +67,11 @@
   }else{
     mysql_query("insert into tbl_admin (user_admin,pass_admin,firstnm_admin,lastnm_admin,pict_admin) values('$user_admin','$pass_admin','$firstnm_admin','$lastnm_admin','images/NO-IMAGE-AVAILABLE.jpg')")or die(mysql_error());
 
-    mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Add System User $firstnm_admin')")or die(mysql_error());
+    mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','Add User Admin $firstnm_admin')")or die(mysql_error());
     ?>
     <script>
       window.location = "admin_user.php";
-      $.jGrowl("System User Successfully added", { header: 'System User add' });
+      $.jGrowl("User Admin Successfully added", { header: 'User Admin add' });
     </script>
     <?php
   }

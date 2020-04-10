@@ -12,7 +12,7 @@
 					
 					<div id="block_bg" class="block">
 						<div class="navbar navbar-inner block-header">
-							<div id="" class="muted pull-left"><i class="icon-user"></i>&nbsp;System user change Password</div>							 
+							<div id="" class="muted pull-left"><i class="icon-user"></i>&nbsp;User Admin change Password</div>							 
 						</div>
 						<div class="block-content collapse in">
 							<div class="span12">

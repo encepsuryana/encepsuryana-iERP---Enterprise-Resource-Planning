@@ -49,7 +49,7 @@
      					<a href="javascript:;" role="button" class="dropdown-toggle" data-toggle="collapse" data-target="#bs1"><i class="icon-chevron-right"></i><i class="icon-sitemap"></i>&nbsp;Manage Location
      						<div class="muted pull-right"><i class="caret"></i></div></a>						
      						<ul id="bs1" class="collapse">						
-     							<li class="">
+     							<li class="active">
      								<a href="device_location.php"><i class="icon-chevron-right"></i><i class="icon-map-marker"></i> Device Location</a>
      							</li>
      							<li class="">
@@ -58,16 +58,16 @@
      						</ul>
      					</li>
      					
-     					<!------/.* manage TRIS user sidebar*------->	
+     					<!------/.* Manage Users sidebar*------->	
      					<li>						
-     						<a href="javascript:;" role="button" class="dropdown-toggle" data-toggle="collapse" data-target="#bs2"><i class="icon-chevron-right"></i><i class="icon-group"></i>&nbsp;Manage TRIS User
+     						<a href="javascript:;" role="button" class="dropdown-toggle" data-toggle="collapse" data-target="#bs2"><i class="icon-chevron-right"></i><i class="icon-group"></i>&nbsp;Manage Users
      							<div class="muted pull-right"><i class="caret"></i></div></a>						
      							<ul id="bs2" class="collapse">						
      								<li class="">
      									<a href="client_user.php"><i class="icon-chevron-right"></i><i class="icon-user"></i>&nbsp;Staff Teknis</a>
      								</li>
      								<li class="">
-     									<a href="admin_user.php"><i class="icon-chevron-right"></i><i class="icon-user"></i>&nbsp;System User</a>
+     									<a href="admin_user.php"><i class="icon-chevron-right"></i><i class="icon-user"></i>&nbsp;User Admin</a>
      								</li>
      							</ul>
      						</li>

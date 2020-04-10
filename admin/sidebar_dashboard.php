@@ -21,7 +21,7 @@
             <a href="client_user.php"><i class="icon-chevron-right"></i><i class="icon-user"></i> Client User</a>
         </li>
         <li class="">
-            <a href="admin_user.php"><i class="icon-chevron-right"></i><i class="icon-user"></i> System User</a>
+            <a href="admin_user.php"><i class="icon-chevron-right"></i><i class="icon-user"></i> User Admin</a>
         </li>
         <li class="">
             <a href="activity_log.php"><i class="icon-chevron-right"></i><i class="icon-file"></i> Activity Log</a>

@@ -2,7 +2,7 @@
 					<div id="user_delete" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-					<h3 id="myModalLabel">Delete System User (s) ?</h3>
+					<h3 id="myModalLabel">Delete User Admin (s) ?</h3>
 					</div>
 					<div class="modal-body">
 					<div class="alert alert-danger">
