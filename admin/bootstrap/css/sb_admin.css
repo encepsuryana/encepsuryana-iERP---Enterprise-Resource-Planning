@@ -48,14 +48,6 @@
     background-color: #6495ED;
 }
 
-.panel-primary a {
-    color: #6495ED;
-}
-
-.panel-primary a:hover {
-    color: #6495ED;
-}
-
 .panel-green {
     border-color: #5cb85c;
 }
@@ -66,13 +58,6 @@
     background-color: #5cb85c;
 }
 
-.panel-green a {
-    color: #5cb85c;
-}
-
-.panel-green a:hover {
-    color: #3d8b3d;
-}
 
 .panel-red {
     border-color: #d9534f;
@@ -84,13 +69,6 @@
     background-color: #d9534f;
 }
 
-.panel-red a {
-    color: #d9534f;
-}
-
-.panel-red a:hover {
-    color: #b52b27;
-}
 
 .panel-yellow {
     border-color: #f0ad4e;
@@ -102,10 +80,18 @@
     background-color: #f0ad4e;
 }
 
-.panel-yellow a {
-    color: #f0ad4e;
+/* Custom Panel a */
+.panel-red a,
+.panel-green a,
+.panel-yellow a,
+.panel-primary a {
+    color: #fff;
 }
 
-.panel-yellow a:hover {
-    color: #df8a13;
+.panel-red a:hover,
+.panel-green a:hover,
+.panel-yellow a:hover,
+.panel-primary a:hover {
+    color: #fff;
+    text-decoration: none;
 }

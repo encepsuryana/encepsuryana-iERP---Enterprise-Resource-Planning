@@ -827,21 +827,21 @@ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-al
 <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:44.85pt'>
   <td width=376 valign=top style='width:281.8pt;padding:0in 5.4pt 0in 5.4pt;
   height:44.85pt'>
-  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  <p class=MsoNormal style='margin-left: 100px;margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
-  "Times New Roman","serif"'>Prepared by:<o:p></o:p></span></p>
+  "Times New Roman","serif"'>Pemeriksa<o:p></o:p></span></p>
 </td>
 <td width=376 valign=top style='width:281.85pt;padding:0in 5.4pt 0in 5.4pt;
 height:44.85pt'>
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
-"Times New Roman","serif"'>Received by:<o:p></o:p></span></p>
+"Times New Roman","serif"'> <o:p></o:p></span></p>
 </td>
 <td width=376 valign=top style='width:281.85pt;padding:0in 5.4pt 0in 5.4pt;
 height:44.85pt'>
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+<p class=MsoNormal style='margin-left: 115px;margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
-"Times New Roman","serif"'>Check by:<o:p></o:p></span></p>
+"Times New Roman","serif"'>Diperiksa oleh,<o:p></o:p></span></p>
 </td>
 </tr>
 
@@ -859,35 +859,30 @@ $row = mysql_fetch_array($query);
   height:17.85pt'>
   <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><u><span
-    style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>RANILO
-    S. AMOR<o:p></o:p></span></u></b></p>
+    style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></u></b></p>
   </td>
   <td width=376 valign=top style='width:281.85pt;padding:0in 5.4pt 0in 5.4pt;
   height:17.85pt'>
   <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><u><span
-    style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>MRS.
-    ANNETTE Z. VILLALUZ<o:p></o:p></span></u></b></p>
+    style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Bakti Ramdani, SE.<o:p></o:p></span></u></b></p>
   </td>
 </tr>
 <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
   <td width=376 valign=top style='width:281.8pt;padding:0in 5.4pt 0in 5.4pt'>
     <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
     text-align:center;line-height:normal'><span style='font-size:12.0pt;
-    mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Technology
-    Facilitator<o:p></o:p></span></p>
+    mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Staff IT<o:p></o:p></span></p>
   </td>
   <td width=376 valign=top style='width:281.85pt;padding:0in 5.4pt 0in 5.4pt'>
     <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
     text-align:center;line-height:normal'><span style='font-size:12.0pt;
-    mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Property
-    Custodian<o:p></o:p></span></p>
+    mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
   </td>
   <td width=376 valign=top style='width:281.85pt;padding:0in 5.4pt 0in 5.4pt'>
     <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
     text-align:center;line-height:normal'><span style='font-size:12.0pt;
-    mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>VP for
-    Operation<o:p></o:p></span></p>
+    mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>HRD & GA<o:p></o:p></span></p>
   </td>
 </tr>
 </table>

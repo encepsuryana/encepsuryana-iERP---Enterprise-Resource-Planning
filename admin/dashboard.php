@@ -34,58 +34,49 @@
               $stocks = mysql_num_rows($stocks);
               ?>
               <div class="row-fluid">				
-                <div class="span6">
+                <div class="span3">
                   <div class="panel panel-primary">
                     <div class="panel-heading">
                      <div class="container-fluid">
                       <div class="row-fluid">
                         <div class="span3"><br/>
-                          <i class="fa fa-desktop fa-5x"></i><br/>
+                          <i class="fa fa-desktop fa-3x"></i><br/>
                         </div>
-                        <div class="span8 text-right"><br/>
-                          <div class="huge"><?php echo $stocks; ?></div>
-                          <div>Total Aset Komputer</div><br/>
+                        <div class="span9 text-right">
+                          <a href="device_stocks.php">
+                            <div class="text-small">Total Aset Komputer</div>
+                            <div class="huge"><?php echo $stocks; ?></div>
+                          </a>
                         </div>
                       </div>
                     </div>	
                   </div>
-                  <a href="device_stocks.php">							  
-                    <div class="modal-footer">
-                      <span class="pull-left">Lihat detail</span>
-                      <span class="pull-right"><i class="icon-chevron-right"></i></span>
-                      <div class="clearfix"></div>
-                    </div>							  
-                  </a>
+                  
                 </div>
               </div>
               <?php 
-              $new = mysql_query("select * from tbl_assets
+              $used = mysql_query("select * from tbl_assets
                 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-                where dev_status='Baru'")or die(mysql_error());
-              $new = mysql_num_rows($new);
+                where dev_status='Used'")or die(mysql_error());
+              $used = mysql_num_rows($used);
               ?>			
-              <div class="span6">
+              <div class="span3">
                 <div class="panel panel-green">
                   <div class="panel-heading">
                    <div class="container-fluid">
                     <div class="row-fluid">
                       <div class="span3"><br/>
-                        <i class="fa fa-share-square fa-5x"></i><br/>
+                        <i class="fa fa-share-square fa-3x"></i><br/>
                       </div>
-                      <div class="span8 text-right"><br/>
-                        <div class="huge"><?php echo $new;?></div>
-                        <div>Digunakan</div><br/>
-                      </div>
+                      <a href="used_device.php">   
+                        <div class="span8 text-right">
+                          <div class="text-small">Total Aset Digunakan</div>
+                          <div class="huge"><?php echo $used;?></div>
+                        </div>
+                      </a>
                     </div>
                   </div>	
                 </div>
-                <a href="newdevice.php">							  
-                  <div class="modal-footer">
-                    <span class="pull-left">lihat detail</span>
-                    <span class="pull-right"><i class="icon-chevron-right"></i></span>
-                    <div class="clearfix"></div>
-                  </div>							  
-                </a>
               </div>
             </div>
           </div>
@@ -98,7 +89,7 @@
             where dev_status='Damage'")or die(mysql_error());
            $damage = mysql_num_rows($damage);
            ?>	
-           <div class="span6">
+           <div class="span3">
             <div class="panel panel-red">
               <div class="panel-heading">
                <div class="container-fluid">

@@ -550,3 +550,7 @@ body {
   border: none !important;
   box-shadow: none !important;
 }
+
+.text-small {
+  font-size: 12px;
+}
