@@ -46,17 +46,17 @@
 							<form class="form-horizontal" method="post">
 								
 								<div class="control-group">
-									<label class="control-label" for="inputEmail">Device Name</label>
+									<label class="control-label" for="inputEmail">Tipe Aset</label>
 									<div class="controls">			
 										<select id="qtype" name="id_asset" readonly="readonly" required>
 
-											<option value="<?php echo $row['id_asset']; ?>" ><?php echo $row['dev_name']; ?></option>
+											<option value="<?php echo $row['id_asset']; ?>" ><?php echo $row['type_asset']; ?></option>
 											<?php
 											$device_query = mysql_query("select * from tbl_asset_type")or die(mysql_error());
 											while($query_device_row = mysql_fetch_array($device_query)){
-												$dev_name = $row['dev_name'];
+												$type_asset = $row['type_asset'];
 												?>
-												<option value="<?php echo $query_device_row['id_asset']; ?>"><?php echo $query_device_row['dev_name'];  ?></option>
+												<option value="<?php echo $query_device_row['id_asset']; ?>"><?php echo $query_device_row['type_asset'];  ?></option>
 											<?php } ?>
 
 										</select>
@@ -75,8 +75,8 @@
 								<div class="control-group">
 									<label class="control-label" for="inputPassword"  placeholder="Device Status" >Device Status</label>
 									<div class="controls">
-										<select value="" name="dev_status" required>
-											<option><?php echo $row['dev_status']; ?></option>																										
+										<select value="" name="status_asset" required>
+											<option><?php echo $row['status_asset']; ?></option>																										
 											<option>Use</option>
 										</select>								
 									</div>
@@ -100,17 +100,17 @@
 							<?php
 							if (isset($_POST['update'])){
 								$id_asset = $_POST['id_asset'];
-								$dev_status = $_POST['dev_status'];																
+								$status_asset = $_POST['status_asset'];																
 								$dev_serial = $_POST['dev_serial'];	
 								
 								mysql_query("update tbl_assets set 
 									id_asset = '$id_asset',																		
-									dev_status = '$dev_status',
+									status_asset = '$status_asset',
 									dev_serial = '$dev_serial'
 									where id = '$get_id' ")or die(mysql_error());
 								
 								mysql_query("insert into notification (fullname,notification,date_of_notification,link) 
-									value('$client_fullname','Update $dev_name, Status  $dev_status : Serial Number: $dev_serial' ,NOW(), 'device_stocks.php')")or die(mysql_error());	
+									value('$client_fullname','Update $type_asset, Status  $status_asset : Serial Number: $dev_serial' ,NOW(), 'device_stocks.php')")or die(mysql_error());	
 									?>
 									<script>
 										window.location = "newdevice.php";

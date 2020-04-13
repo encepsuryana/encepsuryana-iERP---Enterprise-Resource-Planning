@@ -13,17 +13,17 @@ $get_id = $_GET['id'];
 	<form class="form-horizontal" method="post">
 									 
 	<div class="control-group">
-	  <label class="control-label" for="inputEmail">Device Name</label>
+	  <label class="control-label" for="inputEmail">Tipe Aset</label>
 		<div class="controls">			
 			<select id="qtype" name="id_asset" readonly="readonly" required>
 
-			<option value="<?php echo $row['id_asset']; ?>" ><?php echo $row['dev_name']; ?></option>
+			<option value="<?php echo $row['id_asset']; ?>" ><?php echo $row['type_asset']; ?></option>
 				<?php
 				$device_query = mysql_query("select * from device_name")or die(mysql_error());
 				while($query_device_row = mysql_fetch_array($device_query)){
-				$dev_name = $row['dev_name'];
+				$type_asset = $row['type_asset'];
 				?>
-				<option value="<?php echo $query_device_row['id_asset']; ?>"><?php echo $query_device_row['dev_name'];  ?></option>
+				<option value="<?php echo $query_device_row['id_asset']; ?>"><?php echo $query_device_row['type_asset'];  ?></option>
 				<?php } ?>
 
 				</select>
@@ -49,8 +49,8 @@ $get_id = $_GET['id'];
 </form>
 </div>
 <?php 
-mysql_query("update tbl_assets set dev_status='Repaired' where id = '$get_id'")or die(mysql_error());
+mysql_query("update tbl_assets set status_asset='Repaired' where id = '$get_id'")or die(mysql_error());
 mysql_query("insert into notification (fullname,notification,date_of_notification,link) 
-			value('$client_fullname','Repair $dev_name, Serial Number: $dev_serial' ,NOW(), 'device_stocks.php')")or die(mysql_error());					
+			value('$client_fullname','Repair $type_asset, Serial Number: $dev_serial' ,NOW(), 'device_stocks.php')")or die(mysql_error());					
 header('location:damage.php');
 ?>	

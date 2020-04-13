@@ -60,7 +60,7 @@
 		<thead>		
 		        <tr>			        
 					<th class="empty"></th>
-					<th>Device Name</th>
+					<th>Tipe Aset</th>
 					<th>Device Description </th>
 					<th>Inventory Code </th>
 			        <th>Device Brand  </th>
@@ -83,47 +83,47 @@
 		<td><?php
 			   $device_query2 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query2);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			   else if($row['dev_status']=='Repaired')
+			   else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?>
 		</td>
-			<td><?php echo $row['dev_name']; ?></td>
-			<td><?php echo $row['dev_desc']; ?></td>
+			<td><?php echo $row['type_asset']; ?></td>
+			<td><?php echo $row['desc_asset']; ?></td>
 			<td><?php echo $row['dev_serial']; ?></td>
 			<td><?php echo $row['dev_brand']; ?></td>
 			<td><?php echo $row['dev_model']; ?></td>
 			<td><?php
 			   $device_query1 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query1);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			   else if($row['dev_status']=='Repaired')
+			   else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?></td>
 			

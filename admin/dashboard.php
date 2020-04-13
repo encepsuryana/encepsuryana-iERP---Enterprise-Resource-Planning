@@ -57,7 +57,7 @@
               <?php 
               $used = mysql_query("select * from tbl_assets
                 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-                where dev_status='Used'")or die(mysql_error());
+                where status_asset='Used'")or die(mysql_error());
               $used = mysql_num_rows($used);
               ?>			
               <div class="span3">
@@ -86,7 +86,7 @@
            <?php 
            $damage = mysql_query("select * from tbl_assets
             LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-            where dev_status='Damage'")or die(mysql_error());
+            where status_asset='Damage'")or die(mysql_error());
            $damage = mysql_num_rows($damage);
            ?>	
            <div class="span3">
@@ -116,7 +116,7 @@
         <?php 
         $Repaired = mysql_query("select * from tbl_assets
           LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-          where dev_status='Repaired'")or die(mysql_error());
+          where status_asset='Repaired'")or die(mysql_error());
         $Repaired = mysql_num_rows($Repaired);
         ?>				
         <div class="span6">
@@ -150,7 +150,7 @@
   <?php 
   $dump = mysql_query("select * from tbl_assets
     LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-    where dev_status='Dump'")or die(mysql_error());
+    where status_asset='Dump'")or die(mysql_error());
   $dump = mysql_num_rows($dump);
   ?>			   
   <div class="span6">

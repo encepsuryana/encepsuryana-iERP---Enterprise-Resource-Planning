@@ -10,9 +10,9 @@
     <form class="form-horizontal" method="post" action="advance_search1.php">
 	
 			  <div class="control-group">
-			  <label class="control-label" for="inputEmail"> Device Name</label>
+			  <label class="control-label" for="inputEmail"> Tipe Aset</label>
 			  <div class="controls">
-			  <input type="text" name="dev_name" id="inputEmail" placeholder="Device Name" >
+			  <input type="text" name="type_asset" id="inputEmail" placeholder="Tipe Aset" >
 			  </div>
 			  </div>
 				

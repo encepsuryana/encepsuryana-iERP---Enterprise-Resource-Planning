@@ -19,9 +19,9 @@
 				<?php	
 	             $count_item=mysql_query("select * from tbl_assets 
 				 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-				 where dev_name = 'Monitor' OR dev_name = 'monitor'
-                  OR dev_name = 'montor' OR dev_name = 'monitr' OR dev_name = 'mnitor' OR dev_name = 'mntr' OR dev_name = 'MNTR'
-			      OR dev_name = '(monitor)' OR dev_name = '(montor)'
+				 where type_asset = 'Monitor' OR type_asset = 'monitor'
+                  OR type_asset = 'montor' OR type_asset = 'monitr' OR type_asset = 'mnitor' OR type_asset = 'mntr' OR type_asset = 'MNTR'
+			      OR type_asset = '(monitor)' OR type_asset = '(montor)'
 				 ORDER BY tbl_assets.id DESC ");
 	             $count = mysql_num_rows($count_item);
                  ?>	
@@ -53,9 +53,9 @@
 			  <?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'Keyboard' OR dev_name = 'keyboard' OR dev_name = 'KEYBOARD'
-			   OR dev_name = 'kyboard' OR dev_name = 'kboard' OR dev_name = 'kbard' OR dev_name = 'kbord'OR dev_name = 'kbrd' OR dev_name = '(keyboard)'
-			   OR dev_name = '(kbrd)'
+			   where type_asset = 'Keyboard' OR type_asset = 'keyboard' OR type_asset = 'KEYBOARD'
+			   OR type_asset = 'kyboard' OR type_asset = 'kboard' OR type_asset = 'kbard' OR type_asset = 'kbord'OR type_asset = 'kbrd' OR type_asset = '(keyboard)'
+			   OR type_asset = '(kbrd)'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>					
@@ -66,10 +66,10 @@
 				<?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'Mouse' OR dev_name = 'mouse'
-               OR dev_name = 'muse' OR dev_name = 'mose'OR dev_name = 'mse' OR dev_name = 'MOUSE' OR dev_name = '(Mouse)'
-			    OR dev_name = 'Mouse/PS2' OR dev_name = 'Mouse/USB' OR dev_name = 'Mouse(PS2)' OR dev_name = 'Mouse(USB)' 
-				OR dev_name = 'Mouse-PS2' OR dev_name = 'Mouse-USB' OR dev_name = 'Mouse PS2' OR dev_name = 'Mouse USB'
+			   where type_asset = 'Mouse' OR type_asset = 'mouse'
+               OR type_asset = 'muse' OR type_asset = 'mose'OR type_asset = 'mse' OR type_asset = 'MOUSE' OR type_asset = '(Mouse)'
+			    OR type_asset = 'Mouse/PS2' OR type_asset = 'Mouse/USB' OR type_asset = 'Mouse(PS2)' OR type_asset = 'Mouse(USB)' 
+				OR type_asset = 'Mouse-PS2' OR type_asset = 'Mouse-USB' OR type_asset = 'Mouse PS2' OR type_asset = 'Mouse USB'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -80,9 +80,9 @@
 			   <?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'Monitor' OR dev_name = 'monitor'
-               OR dev_name = 'montor' OR dev_name = 'monitr' OR dev_name = 'mnitor' OR dev_name = 'mntr' OR dev_name = 'MNTR'
-			   OR dev_name = '(monitor)' OR dev_name = '(montor)'
+			   where type_asset = 'Monitor' OR type_asset = 'monitor'
+               OR type_asset = 'montor' OR type_asset = 'monitr' OR type_asset = 'mnitor' OR type_asset = 'mntr' OR type_asset = 'MNTR'
+			   OR type_asset = '(monitor)' OR type_asset = '(montor)'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -93,10 +93,10 @@
 			 <?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'Central Processing unit (CPU)' OR dev_name = 'central processing unit' OR dev_name = 'central_processing_unit'
-			   OR dev_name = 'cpu' OR dev_name = 'c_p_u' OR dev_name = 'c.p.u.'   OR dev_name = 'cntral prcessing unit' OR dev_name = 'centrl procesing unit' OR dev_name = 'central processing nit'
-			   OR dev_name = 'cenRal processing unt' OR dev_name = 'cetral processin unit' OR dev_name = 'cetral_processin_unit' OR dev_name = 'centralprocessingunit' OR dev_name = 'CENTRAL PROCESSING UNIT'
-			   OR dev_name = '(CPU)' OR dev_name = '(Central Processing unit (CPU))'
+			   where type_asset = 'Central Processing unit (CPU)' OR type_asset = 'central processing unit' OR type_asset = 'central_processing_unit'
+			   OR type_asset = 'cpu' OR type_asset = 'c_p_u' OR type_asset = 'c.p.u.'   OR type_asset = 'cntral prcessing unit' OR type_asset = 'centrl procesing unit' OR type_asset = 'central processing nit'
+			   OR type_asset = 'cenRal processing unt' OR type_asset = 'cetral processin unit' OR type_asset = 'cetral_processin_unit' OR type_asset = 'centralprocessingunit' OR type_asset = 'CENTRAL PROCESSING UNIT'
+			   OR type_asset = '(CPU)' OR type_asset = '(Central Processing unit (CPU))'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -107,11 +107,11 @@
 			 <?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'Power Supply' OR dev_name = 'power supply'
-			   OR dev_name = 'pwer supply' OR dev_name = 'power spply' OR dev_name = 'pwer suply' OR dev_name = 'poer Suply'
-			   OR dev_name = 'powersupply' OR dev_name = 'power_supply' OR dev_name = 'power.supply' OR dev_name = 'pwer.spply'
-			   OR dev_name = '(power supply)' OR dev_name = '(powersupply)' OR dev_name = '(power_supply)' OR dev_name = '(power-supply)'
-			   OR dev_name = 'POWER SUPPLY'
+			   where type_asset = 'Power Supply' OR type_asset = 'power supply'
+			   OR type_asset = 'pwer supply' OR type_asset = 'power spply' OR type_asset = 'pwer suply' OR type_asset = 'poer Suply'
+			   OR type_asset = 'powersupply' OR type_asset = 'power_supply' OR type_asset = 'power.supply' OR type_asset = 'pwer.spply'
+			   OR type_asset = '(power supply)' OR type_asset = '(powersupply)' OR type_asset = '(power_supply)' OR type_asset = '(power-supply)'
+			   OR type_asset = 'POWER SUPPLY'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -122,11 +122,11 @@
 				<?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'Video Graphic Accelerator (VGA)' OR dev_name = 'VGA'
-			   OR dev_name = '(VGA)' OR dev_name = 'Video.Graphic.Accelerator' OR dev_name = 'Video-Graphic-Accelerator' OR dev_name = 'Video_Graphic_Accelerator'
-			   OR dev_name = 'VideoGraphicAccelerator' OR dev_name = 'Video Graphic' OR dev_name = 'Vedio Graphic Acelerator' OR dev_name = 'VIDEO GRAPHIC ACCELATOR'
-			   OR dev_name = 'VIDEO+GRAPHIC+ACCELATOR' OR dev_name = 'vido grphic' OR dev_name = 'viDo gRphic Accelarator' OR dev_name = 'video graphic accelarator'
-			   OR dev_name = 'vedeo graphic' OR dev_name = 'video graphic accelerator'  OR dev_name = 'videographicaccelerator'OR dev_name = 'vedio graphic accelerator'
+			   where type_asset = 'Video Graphic Accelerator (VGA)' OR type_asset = 'VGA'
+			   OR type_asset = '(VGA)' OR type_asset = 'Video.Graphic.Accelerator' OR type_asset = 'Video-Graphic-Accelerator' OR type_asset = 'Video_Graphic_Accelerator'
+			   OR type_asset = 'VideoGraphicAccelerator' OR type_asset = 'Video Graphic' OR type_asset = 'Vedio Graphic Acelerator' OR type_asset = 'VIDEO GRAPHIC ACCELATOR'
+			   OR type_asset = 'VIDEO+GRAPHIC+ACCELATOR' OR type_asset = 'vido grphic' OR type_asset = 'viDo gRphic Accelarator' OR type_asset = 'video graphic accelarator'
+			   OR type_asset = 'vedeo graphic' OR type_asset = 'video graphic accelerator'  OR type_asset = 'videographicaccelerator'OR type_asset = 'vedio graphic accelerator'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -137,11 +137,11 @@
 				<?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'Power Cords' OR dev_name = 'power cord'
-			   OR dev_name = 'power_cord' OR dev_name = '(power cord)' OR dev_name = 'power.cord' OR dev_name = '(pwer crd)'
-			   OR dev_name = 'powr coRd' OR dev_name = 'ower cord' OR dev_name = 'power cordss' OR dev_name = 'pwer crd'
-			   OR dev_name = 'POWER CORD' OR dev_name = 'poer cd' OR dev_name = 'powe cor'  OR dev_name = 'powercord'
-			   OR dev_name = 'powe cor'  OR dev_name = 'power-cord'
+			   where type_asset = 'Power Cords' OR type_asset = 'power cord'
+			   OR type_asset = 'power_cord' OR type_asset = '(power cord)' OR type_asset = 'power.cord' OR type_asset = '(pwer crd)'
+			   OR type_asset = 'powr coRd' OR type_asset = 'ower cord' OR type_asset = 'power cordss' OR type_asset = 'pwer crd'
+			   OR type_asset = 'POWER CORD' OR type_asset = 'poer cd' OR type_asset = 'powe cor'  OR type_asset = 'powercord'
+			   OR type_asset = 'powe cor'  OR type_asset = 'power-cord'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -152,11 +152,11 @@
 				<?php	
 	           $count_item=mysql_query("select * from tbl_assets 
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-			   where dev_name = 'AVR' OR dev_name = 'A.V.R'
-			   OR dev_name = 'automatic Voltage Regulator' OR dev_name = 'automatic Voltage Reactor' OR dev_name = 'automatic_Voltage_Regulator' OR dev_name = 'automatic-Voltage-Regulator'
-			   OR dev_name = 'avrs' OR dev_name = 'automatic v.r' OR dev_name = 'automatic voltage R.' OR dev_name = 'avregulator'
-			   OR dev_name = 'automatic Voltage Reactor' OR dev_name = 'automatic-Voltage-Reactor' OR dev_name = 'automaticVoltageReactor'  OR dev_name = 'automaticVoltageRegulator'
-			   OR dev_name = 'automtic Voltge Reactor'  OR dev_name = 'automtic Voltge Regulator'
+			   where type_asset = 'AVR' OR type_asset = 'A.V.R'
+			   OR type_asset = 'automatic Voltage Regulator' OR type_asset = 'automatic Voltage Reactor' OR type_asset = 'automatic_Voltage_Regulator' OR type_asset = 'automatic-Voltage-Regulator'
+			   OR type_asset = 'avrs' OR type_asset = 'automatic v.r' OR type_asset = 'automatic voltage R.' OR type_asset = 'avregulator'
+			   OR type_asset = 'automatic Voltage Reactor' OR type_asset = 'automatic-Voltage-Reactor' OR type_asset = 'automaticVoltageReactor'  OR type_asset = 'automaticVoltageRegulator'
+			   OR type_asset = 'automtic Voltge Reactor'  OR type_asset = 'automtic Voltge Regulator'
 		       ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -176,7 +176,7 @@
 		<thead>		
 		        <tr>
 				<th class="empty"></th>
-					<th>Device Name</th>
+					<th>Tipe Aset</th>
 					<th>Device Description </th>
 					<th>Inventory Code</th>
 			        <th>Device Brand  </th>
@@ -191,9 +191,9 @@
 		<?php
 	    $device_query = mysql_query("select * from tbl_assets 
 		LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-		where dev_name = 'Monitor' OR dev_name = 'monitor'
-               OR dev_name = 'montor' OR dev_name = 'monitr' OR dev_name = 'mnitor' OR dev_name = 'mntr' OR dev_name = 'MNTR'
-			   OR dev_name = '(monitor)' OR dev_name = '(montor)'
+		where type_asset = 'Monitor' OR type_asset = 'monitor'
+               OR type_asset = 'montor' OR type_asset = 'monitr' OR type_asset = 'mnitor' OR type_asset = 'mntr' OR type_asset = 'MNTR'
+			   OR type_asset = '(monitor)' OR type_asset = '(montor)'
 		ORDER BY tbl_assets.id DESC") or die(mysql_error());
 	    while ($row = mysql_fetch_array($device_query)) {
 		$id = $row['id'];
@@ -204,47 +204,47 @@
 		<td><?php
 			   $device_query2 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query2);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			   else if($row['dev_status']=='Repaired')
+			   else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?>
 		</td>
-			<td><?php echo $row['dev_name']; ?></td>
-			<td><?php echo $row['dev_desc']; ?></td>
+			<td><?php echo $row['type_asset']; ?></td>
+			<td><?php echo $row['desc_asset']; ?></td>
 			<td><?php echo $row['dev_serial']; ?></td>
 			<td><?php echo $row['dev_brand']; ?></td>
 			<td><?php echo $row['dev_model']; ?></td>
 			<td><?php
 			   $device_query1 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query1);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			   else if($row['dev_status']=='Repaired')
+			   else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?></td>
 												

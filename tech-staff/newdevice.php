@@ -13,7 +13,7 @@
 				<?php	
 	             $count_item=mysql_query("select * from tbl_assets 
 				 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-				 where dev_status = 'New' OR dev_status = 'new'  ORDER BY tbl_assets.id DESC ");
+				 where status_asset = 'New' OR status_asset = 'new'  ORDER BY tbl_assets.id DESC ");
 	             $count = mysql_num_rows($count_item);
                  ?>		                 					 
 				   <div id="block_bg" class="block">
@@ -55,7 +55,7 @@
 		<thead>		
 		        <tr>
 				<th class="empty"></th>
-					<th>Device Name</th>
+					<th>Tipe Aset</th>
 					<th>Device Description </th>
 					<th>Inventory Code </th>
 			        <th>Device Brand  </th>
@@ -71,22 +71,22 @@
 		LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 		where NOT EXISTS 
 	   (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status='new' ORDER BY tbl_assets.id DESC") or die(mysql_error());
+		and status_asset='new' ORDER BY tbl_assets.id DESC") or die(mysql_error());
 	    while ($row = mysql_fetch_array($device_query)) {
 		$id = $row['id'];
-		$dev_name = $row['dev_name'];
+		$type_asset = $row['type_asset'];
 		?>
 										
 		<tr>
 		<td class="empty">
 			<i class="icon-check"></i>
 		</td>
-			<td><?php echo $row['dev_name']; ?></td>
-			<td><?php echo $row['dev_desc']; ?></td>
+			<td><?php echo $row['type_asset']; ?></td>
+			<td><?php echo $row['desc_asset']; ?></td>
 			<td><?php echo $row['dev_serial']; ?></td>
 			<td><?php echo $row['dev_brand']; ?></td>
 			<td><?php echo $row['dev_model']; ?></td>
-			<td><div class="alert alert-success"><i class="icon-check"></i><strong><?php echo $row['dev_status']; ?></strong></div></td>				
+			<td><div class="alert alert-success"><i class="icon-check"></i><strong><?php echo $row['status_asset']; ?></strong></div></td>				
 		</tr>
 											
 	<?php } ?>   

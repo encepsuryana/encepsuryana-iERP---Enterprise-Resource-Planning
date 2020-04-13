@@ -25,15 +25,15 @@
 	          </div>
 							
 			  <div class="control-group">
-		      <label class="control-label" for="inputEmail">Device Name</label>
+		      <label class="control-label" for="inputEmail">Tipe Aset</label>
 			  <div class="controls">
-			  <select name="dev_name" class="" required/>
-			  <option>&larr; Select Device Name &rarr;</option>
+			  <select name="type_asset" class="" required/>
+			  <option>&larr; Select Tipe Aset &rarr;</option>
 			  <?php
 				$device_query = mysql_query("select * from tbl_asset_type")or die(mysql_error());
 				while($device_row = mysql_fetch_array($device_query)){			
 				?>
-			  <option><?php echo $device_row['dev_name']; ?></option>
+			  <option><?php echo $device_row['type_asset']; ?></option>
 			  <?php } ?>
 			  </select>
 		      </div>

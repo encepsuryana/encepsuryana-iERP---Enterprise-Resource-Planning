@@ -12,7 +12,7 @@
 				<?php	
 	             $count_item=mysql_query("select * from tbl_assets 
 				 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-				 where dev_status = 'damage' OR dev_status = 'Damage' ORDER BY tbl_assets.id DESC ");
+				 where status_asset = 'damage' OR status_asset = 'Damage' ORDER BY tbl_assets.id DESC ");
 	             $count = mysql_num_rows($count_item);
                  ?>	 
 				   <div id="block_bg" class="block">
@@ -54,7 +54,7 @@
 		<thead>		
 		        <tr>			        
 					<th class="empty"></th>
-					<th>Device Name</th>
+					<th>Tipe Aset</th>
 					<th>Device Description </th>
 					<th>Inventory Code </th>
 			        <th>Device Brand  </th>
@@ -71,32 +71,32 @@
 		                     LEFT JOIN tbl_location_details ON tbl_assets.id = tbl_location_details.id		
 		                     LEFT JOIN tbl_location ON tbl_location_details.id_location = tbl_location.id_location
 							 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-							 where dev_status = 'damage' ORDER BY tbl_location_details.ld_id DESC")or die(mysql_error());
+							 where status_asset = 'damage' ORDER BY tbl_location_details.ld_id DESC")or die(mysql_error());
 		while($row = mysql_fetch_array($device_query)){
 		$id = $row['id'];
 		$id_location = $row['id_location'];
-		$dev_status = $row['dev_status'];
+		$status_asset = $row['status_asset'];
 		?>
 										
 		<tr>
 		<td class="empty">
 			<i class="icon-remove-sign"></i>
 		</td>
-			<td><?php echo $row['dev_name']; ?></td>
-			<td><?php echo $row['dev_desc']; ?></td>
+			<td><?php echo $row['type_asset']; ?></td>
+			<td><?php echo $row['desc_asset']; ?></td>
 			<td><?php echo $row['dev_serial']; ?></td>
 			<td><?php echo $row['dev_brand']; ?></td>
 			<td><?php echo $row['dev_model']; ?></td>
 			<td><?php
 			   $device_query1 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query1);
-		       if($row['dev_status']=='Damage')
+		       if($row['status_asset']=='Damage')
 		       {
-			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }		       
 		       else
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i> <strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i> <strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?></td>
 			  
@@ -104,9 +104,9 @@
 			
 			<?php include('modal_damage.php'); ?>
 			<?php include('toolttip_edit_delete.php'); ?>
-			<?php if ($dev_status == 'Repaired' ){ ?>
+			<?php if ($status_asset == 'Repaired' ){ ?>
 			<td><a class="btn btn-success">Repaired</a></td>	
-			<?php }else if ($dev_status == 'Damage' ) { ?>
+			<?php }else if ($status_asset == 'Damage' ) { ?>
 			<td><a rel="tooltip" title="Repair" id="e<?php echo $id; ?>" href="#repair<?php echo $id; ?>" data-toggle="modal" class="btn btn-success"><div class="hide">Damage</div>Repair</a></td>
 			<?php }else{ ?>			
 			<?php } ?>

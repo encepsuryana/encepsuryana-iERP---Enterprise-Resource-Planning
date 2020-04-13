@@ -18,7 +18,7 @@
      						<a href="device_stocks.php"><i class="icon-chevron-right"></i><i class="icon-desktop"></i> Device / Stocks</a>
      					</li>
      					<li class="">
-     						<a href="dev_name.php"><i class="icon-chevron-right"></i><i class="icon-folder-open-alt"></i> Device Type</a>
+     						<a href="assets_type.php"><i class="icon-chevron-right"></i><i class="icon-folder-open-alt"></i> Device Type</a>
      					</li> 
      					<li>
      						<a href="newdevice.php"><i class="icon-chevron-right"></i><i class="icon-laptop"></i> Assign&nbsp;<span class="label label-success">New</span>&nbsp;Device

@@ -213,7 +213,8 @@ body {
 	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 6, 0.75);
 	-moz-box-shadow:    2px 2px 5px rgba(0, 0, 6, 0.75);
 	box-shadow:         2px 2px 5px rgba(0, 0, 6, 0.75);
-    height: 148px;
+    height: auto;
+    max-height: 187px;
     margin-bottom: -16px;
     margin-left: 35px;
     margin-top: 9px;

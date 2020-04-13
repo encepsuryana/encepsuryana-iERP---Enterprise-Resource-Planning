@@ -26,15 +26,15 @@
 							<form class="form-horizontal" method="post">
 							
 										<div class="control-group">
-		                                 <label class="control-label" for="inputEmail">Device Name</label>
+		                                 <label class="control-label" for="inputEmail">Tipe Aset</label>
 			                                <div class="controls">
 				                              <select name="id_asset" class="chzn-select"  required/>
 				                                 <option></option>
 			                                       <?php $tbl_asset_type =  mysql_query("select * from tbl_asset_type")or die(mysql_error()); 
 			                                        while ($row=mysql_fetch_array($tbl_asset_type)){ 
-													$dev_name = $row['dev_name'];
+													$type_asset = $row['type_asset'];
 													?>
-				                                    <option value="<?php echo $row['id_asset']; ?>&nbspName&nbsp<?php echo $row['dev_name']; ?>"><?php echo $row['dev_name']; ?></option>
+				                                    <option value="<?php echo $row['id_asset']; ?>&nbspName&nbsp<?php echo $row['type_asset']; ?>"><?php echo $row['type_asset']; ?></option>
 				                                     <?php } ?>
 				                                </select>
 		                                     </div>
@@ -65,7 +65,7 @@
 										<div class="control-group">
 											<label class="control-label" for="inputPassword"  placeholder="Device Status" >Device Status</label>
 											<div class="controls">
-											<select name="dev_status"  required>										
+											<select name="status_asset"  required>										
 													<option>New</option>																									
 												</select>								
 											</div>
@@ -75,7 +75,7 @@
 										<div class="control-group">
 											<label class="control-label" for="inputPassword">Description</label>
 											<div class="controls">
-													<textarea name="dev_desc" id="ckeditor_full"></textarea>
+													<textarea name="desc_asset" id="ckeditor_full"></textarea>
 											</div>
 										</div>
 												
@@ -94,11 +94,11 @@
 <?php
 if (isset($_POST['save'])){
 $id_asset = $_POST['id_asset'];
-$dev_desc = $_POST['dev_desc'];
+$desc_asset = $_POST['desc_asset'];
 $dev_serial = $_POST['dev_serial'];
 $dev_brand = $_POST['dev_brand'];
 $dev_model = $_POST['dev_model'];
-$dev_status = $_POST['dev_status'];
+$status_asset = $_POST['status_asset'];
 										
 						
 $query = mysql_query("select * from tbl_assets where dev_serial = '$dev_serial' ")or die(mysql_error());
@@ -111,7 +111,7 @@ window.location = "device_stocks.php";
 </script>
 <?php
 }else{
-mysql_query("insert into tbl_assets (id_asset,dev_desc,dev_serial,dev_brand,dev_model,dev_status) values('$id_asset','$dev_desc','$dev_serial','$dev_brand','$dev_model','$dev_status')")or die(mysql_error());
+mysql_query("insert into tbl_assets (id_asset,desc_asset,dev_serial,dev_brand,dev_model,status_asset) values('$id_asset','$desc_asset','$dev_serial','$dev_brand','$dev_model','$status_asset')")or die(mysql_error());
 mysql_query("insert into notification (fullname,notification,date_of_notification,link) value('$client_fullname','Add device id $id_asset, Serial Number: $dev_serial',NOW(),'device_stocks.php')")or die(mysql_error());										
 ?>
 <script>

@@ -15,49 +15,49 @@
 				 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				 where NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	             and dev_status = 'New' and dev_name = 'Power cords'
+	             and status_asset = 'New' and type_asset = 'Power cords'
 		         OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'Power cord'
+		        and status_asset = 'New' and type_asset = 'Power cord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'power_cord'
+		        and status_asset = 'New' and type_asset = 'power_cord'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = '(power cord)'
+		        and status_asset = 'New' and type_asset = '(power cord)'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'power.cord'
+		        and status_asset = 'New' and type_asset = 'power.cord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = '(pwer crd)'
+		        and status_asset = 'New' and type_asset = '(pwer crd)'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'powr coRd'
+		        and status_asset = 'New' and type_asset = 'powr coRd'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'ower cord'
+		        and status_asset = 'New' and type_asset = 'ower cord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'power cordss'
+		        and status_asset = 'New' and type_asset = 'power cordss'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'pwer crd'
+		        and status_asset = 'New' and type_asset = 'pwer crd'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'POWER CORD'
+		        and status_asset = 'New' and type_asset = 'POWER CORD'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'poer cd'
+		        and status_asset = 'New' and type_asset = 'poer cd'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'powe cor'
+		        and status_asset = 'New' and type_asset = 'powe cor'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'powercord'
+		        and status_asset = 'New' and type_asset = 'powercord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'power-cord'
+		         and status_asset = 'New' and type_asset = 'power-cord'
 				 ORDER BY tbl_assets.id DESC ");
 	             $count = mysql_num_rows($count_item);
                  ?>	   
@@ -92,29 +92,29 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			   where NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	             and dev_status = 'New' and dev_name = 'Keyboard'
+	             and status_asset = 'New' and type_asset = 'Keyboard'
 		
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'kyboard'
+		        and status_asset = 'New' and type_asset = 'kyboard'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'kboard'
+		        and status_asset = 'New' and type_asset = 'kboard'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'kbard'
+		        and status_asset = 'New' and type_asset = 'kbard'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'kbord'
+		        and status_asset = 'New' and type_asset = 'kbord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'kbrd'
+		        and status_asset = 'New' and type_asset = 'kbrd'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = '(keyboard)'
+		        and status_asset = 'New' and type_asset = '(keyboard)'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = '(kbrd)'
+		        and status_asset = 'New' and type_asset = '(kbrd)'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>					
@@ -127,41 +127,41 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			   where NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	          and dev_status = 'New' and dev_name = 'mouse'
+	          and status_asset = 'New' and type_asset = 'mouse'
 		
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'mose'		       
+		      and status_asset = 'New' and type_asset = 'mose'		       
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'mse'
+		      and status_asset = 'New' and type_asset = 'mse'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = '(Mouse)'
+		      and status_asset = 'New' and type_asset = '(Mouse)'
 		      OR NOT EXISTS 
 	         (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse/PS2'
+		      and status_asset = 'New' and type_asset = 'Mouse/PS2'
 		      OR NOT EXISTS 
 	         (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse/USB'
+		      and status_asset = 'New' and type_asset = 'Mouse/USB'
 		      OR NOT EXISTS 
 	         (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse(PS2)'
+		      and status_asset = 'New' and type_asset = 'Mouse(PS2)'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse(USB)'
+		      and status_asset = 'New' and type_asset = 'Mouse(USB)'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse-PS2'
+		      and status_asset = 'New' and type_asset = 'Mouse-PS2'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse-USB'
+		      and status_asset = 'New' and type_asset = 'Mouse-USB'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse PS2'
+		      and status_asset = 'New' and type_asset = 'Mouse PS2'
 		      OR NOT EXISTS 
 	         (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'Mouse USB' 
+		      and status_asset = 'New' and type_asset = 'Mouse USB' 
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -174,28 +174,28 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			   where NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	             and dev_status = 'New' and dev_name = 'monitor'
+	             and status_asset = 'New' and type_asset = 'monitor'
 		         OR NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'montor'
+		         and status_asset = 'New' and type_asset = 'montor'
 		         OR NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'monitr'
+		         and status_asset = 'New' and type_asset = 'monitr'
 		         OR NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'mnitor'
+		         and status_asset = 'New' and type_asset = 'mnitor'
 		         OR NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'mntr'
+		         and status_asset = 'New' and type_asset = 'mntr'
 		         OR NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'MNTR'
+		         and status_asset = 'New' and type_asset = 'MNTR'
 		         OR NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = '(monitor)'
+		         and status_asset = 'New' and type_asset = '(monitor)'
 		         OR NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = '(montor)'
+		         and status_asset = 'New' and type_asset = '(montor)'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -208,52 +208,52 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			   where NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	             and dev_status = 'New' and dev_name = 'Central Processing unit (CPU)'
+	             and status_asset = 'New' and type_asset = 'Central Processing unit (CPU)'
 		         OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'central processing unit'
+		         and status_asset = 'New' and type_asset = 'central processing unit'
 		         OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'central_processing_unit'
+		         and status_asset = 'New' and type_asset = 'central_processing_unit'
 		         OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'cpu'
+		         and status_asset = 'New' and type_asset = 'cpu'
 		         OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'c_p_u'
+		         and status_asset = 'New' and type_asset = 'c_p_u'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'c.p.u.'
-		        OR NOT EXISTS 
-	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'cntral prcessing unit'
+		        and status_asset = 'New' and type_asset = 'c.p.u.'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'centrl procesing unit'
+		        and status_asset = 'New' and type_asset = 'cntral prcessing unit'
+		        OR NOT EXISTS 
+	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
+		        and status_asset = 'New' and type_asset = 'centrl procesing unit'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'central processing nit'
+		       and status_asset = 'New' and type_asset = 'central processing nit'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'cenRal processing unt'
+		       and status_asset = 'New' and type_asset = 'cenRal processing unt'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'cetral processin unit'
+		       and status_asset = 'New' and type_asset = 'cetral processin unit'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'cetral_processin_unit'
+		       and status_asset = 'New' and type_asset = 'cetral_processin_unit'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'centralprocessingunit'
+		       and status_asset = 'New' and type_asset = 'centralprocessingunit'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'CENTRAL PROCESSING UNIT'
+		       and status_asset = 'New' and type_asset = 'CENTRAL PROCESSING UNIT'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = '(CPU)'
+		       and status_asset = 'New' and type_asset = '(CPU)'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = '(Central Processing unit (CPU))'
+		       and status_asset = 'New' and type_asset = '(Central Processing unit (CPU))'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -266,49 +266,49 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			   where NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	           and dev_status = 'New' and dev_name = 'Power supply'
+	           and status_asset = 'New' and type_asset = 'Power supply'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'power supply'
+		      and status_asset = 'New' and type_asset = 'power supply'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'pwer supply'
+		      and status_asset = 'New' and type_asset = 'pwer supply'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'power spply'
+		      and status_asset = 'New' and type_asset = 'power spply'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'pwer suply'
+		      and status_asset = 'New' and type_asset = 'pwer suply'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'poer Suply'
+		      and status_asset = 'New' and type_asset = 'poer Suply'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'powersupply'
+		      and status_asset = 'New' and type_asset = 'powersupply'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'power_supply'
+		      and status_asset = 'New' and type_asset = 'power_supply'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'power.supply'
+		       and status_asset = 'New' and type_asset = 'power.supply'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'pwer.spply'
+		       and status_asset = 'New' and type_asset = 'pwer.spply'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = '(power supply)'
+		       and status_asset = 'New' and type_asset = '(power supply)'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = '(powersupply)'
+		       and status_asset = 'New' and type_asset = '(powersupply)'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = '(power_supply)'
+		       and status_asset = 'New' and type_asset = '(power_supply)'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = '(power-supply)'
+		        and status_asset = 'New' and type_asset = '(power-supply)'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'POWER SUPPLY'
+		        and status_asset = 'New' and type_asset = 'POWER SUPPLY'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -321,52 +321,52 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			   where NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	           and dev_status = 'New' and dev_name = 'Video Graphic Accelerator (VGA)'
+	           and status_asset = 'New' and type_asset = 'Video Graphic Accelerator (VGA)'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'VGA'
+		       and status_asset = 'New' and type_asset = 'VGA'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = '(VGA)'
+		       and status_asset = 'New' and type_asset = '(VGA)'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'Video.Graphic.Accelerator'
+		       and status_asset = 'New' and type_asset = 'Video.Graphic.Accelerator'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'Video-Graphic-Accelerator'
+		       and status_asset = 'New' and type_asset = 'Video-Graphic-Accelerator'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'Video_Graphic_Accelerator'
+		       and status_asset = 'New' and type_asset = 'Video_Graphic_Accelerator'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'VideoGraphicAccelerator'
+		       and status_asset = 'New' and type_asset = 'VideoGraphicAccelerator'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'Video Graphic'
+		       and status_asset = 'New' and type_asset = 'Video Graphic'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'Vedio Graphic Acelerator'
+		       and status_asset = 'New' and type_asset = 'Vedio Graphic Acelerator'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'VIDEO GRAPHIC ACCELATOR'
+		       and status_asset = 'New' and type_asset = 'VIDEO GRAPHIC ACCELATOR'
 		       OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'VIDEO+GRAPHIC+ACCELATOR'
+		      and status_asset = 'New' and type_asset = 'VIDEO+GRAPHIC+ACCELATOR'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'vido grphic'
+		      and status_asset = 'New' and type_asset = 'vido grphic'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'viDo gRphic Accelarator'
+		      and status_asset = 'New' and type_asset = 'viDo gRphic Accelarator'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'vedeo graphic'
+		      and status_asset = 'New' and type_asset = 'vedeo graphic'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'video graphic accelerator'
+		      and status_asset = 'New' and type_asset = 'video graphic accelerator'
 		      OR NOT EXISTS 
 	          (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		      and dev_status = 'New' and dev_name = 'vedio graphic accelerator'
+		      and status_asset = 'New' and type_asset = 'vedio graphic accelerator'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -379,49 +379,49 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			   where NOT EXISTS 
 	             (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	             and dev_status = 'New' and dev_name = 'Power cords'
+	             and status_asset = 'New' and type_asset = 'Power cords'
 		         OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'Power cord'
+		        and status_asset = 'New' and type_asset = 'Power cord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'power_cord'
+		        and status_asset = 'New' and type_asset = 'power_cord'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = '(power cord)'
+		        and status_asset = 'New' and type_asset = '(power cord)'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'power.cord'
+		        and status_asset = 'New' and type_asset = 'power.cord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = '(pwer crd)'
+		        and status_asset = 'New' and type_asset = '(pwer crd)'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'powr coRd'
+		        and status_asset = 'New' and type_asset = 'powr coRd'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'ower cord'
+		        and status_asset = 'New' and type_asset = 'ower cord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'power cordss'
+		        and status_asset = 'New' and type_asset = 'power cordss'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'pwer crd'
+		        and status_asset = 'New' and type_asset = 'pwer crd'
 		        OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'POWER CORD'
+		        and status_asset = 'New' and type_asset = 'POWER CORD'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'poer cd'
+		        and status_asset = 'New' and type_asset = 'poer cd'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'powe cor'
+		        and status_asset = 'New' and type_asset = 'powe cor'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'powercord'
+		        and status_asset = 'New' and type_asset = 'powercord'
 		        OR NOT EXISTS 
 	            (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		         and dev_status = 'New' and dev_name = 'power-cord'
+		         and status_asset = 'New' and type_asset = 'power-cord'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -434,52 +434,52 @@
 			   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			    where NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	           and dev_status = 'New' and dev_name = 'AVR'
+	           and status_asset = 'New' and type_asset = 'AVR'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'A.V.R'
+		       and status_asset = 'New' and type_asset = 'A.V.R'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic Voltage Regulator'
+		       and status_asset = 'New' and type_asset = 'automatic Voltage Regulator'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic Voltage Reactor'
+		       and status_asset = 'New' and type_asset = 'automatic Voltage Reactor'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic_Voltage_Regulator'
+		       and status_asset = 'New' and type_asset = 'automatic_Voltage_Regulator'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic-Voltage-Regulator'
+		       and status_asset = 'New' and type_asset = 'automatic-Voltage-Regulator'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'avrs'
+		       and status_asset = 'New' and type_asset = 'avrs'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic v.r'
+		       and status_asset = 'New' and type_asset = 'automatic v.r'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic voltage R.'
+		       and status_asset = 'New' and type_asset = 'automatic voltage R.'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		        and dev_status = 'New' and dev_name = 'avregulator'
+		        and status_asset = 'New' and type_asset = 'avregulator'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic Voltage Reactor'
+		       and status_asset = 'New' and type_asset = 'automatic Voltage Reactor'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automatic-Voltage-Reactor'
+		       and status_asset = 'New' and type_asset = 'automatic-Voltage-Reactor'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automaticVoltageReactor'
+		       and status_asset = 'New' and type_asset = 'automaticVoltageReactor'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automaticVoltageRegulator'
+		       and status_asset = 'New' and type_asset = 'automaticVoltageRegulator'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automtic Voltge Reactor'
+		       and status_asset = 'New' and type_asset = 'automtic Voltge Reactor'
 		       OR NOT EXISTS 
 	           (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		       and dev_status = 'New' and dev_name = 'automtic Voltge Regulator'
+		       and status_asset = 'New' and type_asset = 'automtic Voltge Regulator'
 			   ORDER BY tbl_assets.id DESC");
 	           $count = mysql_num_rows($count_item);
                ?>
@@ -526,7 +526,7 @@
 		<thead>		
 		        <tr>
 				<th class="empty"></th>
-					<th>Device Name</th>
+					<th>Tipe Aset</th>
 					<th>Device Description </th>
 					<th>Inventory Code</th>
 			        <th>Device Brand  </th>
@@ -542,49 +542,49 @@
 		LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 		where NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)	   
-	    and dev_status = 'New' and dev_name = 'Power cords'
+	    and status_asset = 'New' and type_asset = 'Power cords'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'Power cord'
+		and status_asset = 'New' and type_asset = 'Power cord'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'power_cord'
+		and status_asset = 'New' and type_asset = 'power_cord'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = '(power cord)'
+		and status_asset = 'New' and type_asset = '(power cord)'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'power.cord'
+		and status_asset = 'New' and type_asset = 'power.cord'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = '(pwer crd)'
+		and status_asset = 'New' and type_asset = '(pwer crd)'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'powr coRd'
+		and status_asset = 'New' and type_asset = 'powr coRd'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'ower cord'
+		and status_asset = 'New' and type_asset = 'ower cord'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'power cordss'
+		and status_asset = 'New' and type_asset = 'power cordss'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'pwer crd'
+		and status_asset = 'New' and type_asset = 'pwer crd'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'POWER CORD'
+		and status_asset = 'New' and type_asset = 'POWER CORD'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'poer cd'
+		and status_asset = 'New' and type_asset = 'poer cd'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'powe cor'
+		and status_asset = 'New' and type_asset = 'powe cor'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'powercord'
+		and status_asset = 'New' and type_asset = 'powercord'
 		OR NOT EXISTS 
 	    (select * from tbl_location_details where tbl_assets.id = tbl_location_details.id)
-		and dev_status = 'New' and dev_name = 'power-cord'
+		and status_asset = 'New' and type_asset = 'power-cord'
 		ORDER BY tbl_assets.id DESC") or die(mysql_error());
 	    while ($row = mysql_fetch_array($device_query)) {
 		$id = $row['id'];
@@ -592,14 +592,14 @@
 										
 		<tr>
 		<td width="30" class="empty">
-			<input id="" class="uniform_on" name="selector[]" type="checkbox" value="<?php echo $id; ?>&nbspName&nbsp<?php echo $dev_name; ?>" >
+			<input id="" class="uniform_on" name="selector[]" type="checkbox" value="<?php echo $id; ?>&nbspName&nbsp<?php echo $type_asset; ?>" >
 		</td>
-			<td><?php echo $row['dev_name']; ?></td>
-			<td><?php echo $row['dev_desc']; ?></td>
+			<td><?php echo $row['type_asset']; ?></td>
+			<td><?php echo $row['desc_asset']; ?></td>
 			<td><?php echo $row['dev_serial']; ?></td>
 			<td><?php echo $row['dev_brand']; ?></td>
 			<td><?php echo $row['dev_model']; ?></td>
-			<td><div class="alert alert-success"><i class="icon-check"></i><strong><?php echo $row['dev_status']; ?></strong></div></td>																
+			<td><div class="alert alert-success"><i class="icon-check"></i><strong><?php echo $row['status_asset']; ?></strong></div></td>																
 		</tr>
 											
 	<?php } ?>   

@@ -180,11 +180,11 @@
            LEFT JOIN tbl_location_details ON tbl_assets.id = tbl_location_details.id		
            LEFT JOIN tbl_location ON tbl_location_details.id_location = tbl_location.id_location
            LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-           where dev_status = 'Dump' ORDER BY tbl_location_details.ld_id DESC")or die(mysql_error());
+           where status_asset = 'Dump' ORDER BY tbl_location_details.ld_id DESC")or die(mysql_error());
           while($row = mysql_fetch_array($device_query)){
             $id = $row['id'];
             $id_location = $row['id_location'];
-            $dev_status = $row['dev_status'];
+            $status_asset = $row['status_asset'];
             ?>
             <tr style='mso-yfti-irow:1'>
               <td width=188 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
@@ -198,7 +198,7 @@
             mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
             mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
             <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-            normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['dev_name']; ?><o:p></o:p></span></p>
+            normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['type_asset']; ?><o:p></o:p></span></p>
           </td>
           <td width=188 valign=top style='width:140.9pt;border-top:none;border-left:
           none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -219,14 +219,14 @@
       mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
       mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
       <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-      normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['dev_desc']; ?><o:p></o:p></span></p>
+      normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['desc_asset']; ?><o:p></o:p></span></p>
     </td>
     <td width=188 valign=top style='width:140.95pt;border-top:none;border-left:
     none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
     mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
     mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
     <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-    normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['dev_status']; ?><o:p></o:p></span></p>
+    normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['status_asset']; ?><o:p></o:p></span></p>
   </td>
 <?php } ?> 
 <!--NALD, ARI DI ASTA ANG IMO NA I BUTANG SULOD SA MYSQL FETCH ARRAY-->
@@ -332,10 +332,10 @@ mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:
 <?php	
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-  where dev_name = 'Keyboard' and dev_status = 'Dump' OR dev_name = 'keyboard'  and dev_status = 'Dump'
-  OR dev_name = 'KEYBOARD'  and dev_status = 'Dump' OR dev_name = 'kyboard'  and dev_status = 'Dump' OR dev_name = 'kboard'  and dev_status = 'damage'
-  OR dev_name = 'kbard'  and dev_status = 'Dump'  OR dev_name = 'kbord'  and dev_status = 'Dump' OR dev_name = 'kbrd' and dev_status = 'damage'
-  OR dev_name = '(keyboard)'  and dev_status = 'Dump' OR dev_name = '(kbrd)'  and dev_status = 'Dump'
+  where type_asset = 'Keyboard' and status_asset = 'Dump' OR type_asset = 'keyboard'  and status_asset = 'Dump'
+  OR type_asset = 'KEYBOARD'  and status_asset = 'Dump' OR type_asset = 'kyboard'  and status_asset = 'Dump' OR type_asset = 'kboard'  and status_asset = 'damage'
+  OR type_asset = 'kbard'  and status_asset = 'Dump'  OR type_asset = 'kbord'  and status_asset = 'Dump' OR type_asset = 'kbrd' and status_asset = 'damage'
+  OR type_asset = '(keyboard)'  and status_asset = 'Dump' OR type_asset = '(kbrd)'  and status_asset = 'Dump'
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>		
@@ -371,7 +371,7 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 <?php	
 $count_item=mysql_query("select * from tbl_assets 
  LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
- where dev_status = 'Dump' OR dev_status = 'Dump' ORDER BY tbl_assets.id DESC ");
+ where status_asset = 'Dump' OR status_asset = 'Dump' ORDER BY tbl_assets.id DESC ");
 $count = mysql_num_rows($count_item);
 ?>	 
 <td width=171 valign=top style='width:128.35pt;border-top:none;border-left:
@@ -402,12 +402,12 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
   where 
-  dev_status = 'Dump'    and dev_name = 'mouse'       OR dev_status = 'Dump'  and dev_name = 'Mouse'       OR dev_status = 'Dump' and dev_name = 'muse'
-  OR dev_status = 'Dump'    and dev_name = 'mose'        OR dev_status = 'Dump'  and dev_name = 'mse'         OR dev_status = 'Dump' and dev_name = 'MOUSE' 
-  OR dev_status = 'Dump'    and dev_name = '(Mouse)'
-  OR dev_status = 'Dump'    and dev_name = 'Mouse/PS2'    OR dev_status = 'Dump'  and dev_name = 'Mouse/USB'  OR dev_status = 'Dump' and dev_name = 'Mouse(PS2)' 
-  OR dev_status = 'Dump'    and dev_name = 'Mouse(USB)'   OR dev_status = 'Dump'  and dev_name = 'Mouse-PS2'  OR dev_status = 'Dump' and dev_name = 'Mouse-USB'  
-  OR dev_status = 'Dump'    and dev_name = 'Mouse PS2'    OR dev_status = 'Dump'  and dev_name = 'Mouse USB' 
+  status_asset = 'Dump'    and type_asset = 'mouse'       OR status_asset = 'Dump'  and type_asset = 'Mouse'       OR status_asset = 'Dump' and type_asset = 'muse'
+  OR status_asset = 'Dump'    and type_asset = 'mose'        OR status_asset = 'Dump'  and type_asset = 'mse'         OR status_asset = 'Dump' and type_asset = 'MOUSE' 
+  OR status_asset = 'Dump'    and type_asset = '(Mouse)'
+  OR status_asset = 'Dump'    and type_asset = 'Mouse/PS2'    OR status_asset = 'Dump'  and type_asset = 'Mouse/USB'  OR status_asset = 'Dump' and type_asset = 'Mouse(PS2)' 
+  OR status_asset = 'Dump'    and type_asset = 'Mouse(USB)'   OR status_asset = 'Dump'  and type_asset = 'Mouse-PS2'  OR status_asset = 'Dump' and type_asset = 'Mouse-USB'  
+  OR status_asset = 'Dump'    and type_asset = 'Mouse PS2'    OR status_asset = 'Dump'  and type_asset = 'Mouse USB' 
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>
@@ -447,10 +447,10 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 <?php	
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-  where dev_status = 'Dump' and dev_name = 'monitor' OR dev_status = 'Dump' and dev_name = 'montor'
-  OR dev_status = 'Dump' and dev_name = 'Monitor' OR dev_status = 'Dump' and dev_name = 'monitr' OR dev_status = 'Dump' and dev_name = 'mnitor'
-  OR dev_status = 'Dump' and dev_name = 'mntr' OR dev_status = 'Dump' and dev_name = 'MNTR' OR dev_status = 'Dump' and dev_name = '(monitor)'
-  OR dev_status = 'Dump' and dev_name = '(montor)'
+  where status_asset = 'Dump' and type_asset = 'monitor' OR status_asset = 'Dump' and type_asset = 'montor'
+  OR status_asset = 'Dump' and type_asset = 'Monitor' OR status_asset = 'Dump' and type_asset = 'monitr' OR status_asset = 'Dump' and type_asset = 'mnitor'
+  OR status_asset = 'Dump' and type_asset = 'mntr' OR status_asset = 'Dump' and type_asset = 'MNTR' OR status_asset = 'Dump' and type_asset = '(monitor)'
+  OR status_asset = 'Dump' and type_asset = '(montor)'
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>
@@ -482,12 +482,12 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 <?php	
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-  where dev_status = 'Dump' and dev_name = 'Central Processing unit (CPU)' OR dev_status = 'Dump' and dev_name = 'central processing unit'
-  OR dev_status = 'Dump' and dev_name = 'central_processing_unit' OR dev_status = 'Dump' and dev_name = 'cpu' OR dev_status = 'Dump' and dev_name = 'c_p_u' OR dev_status = 'Dump' and dev_name = 'c.p.u.'
-  OR dev_status = 'Dump' and dev_name = 'cntral prcessing unit' OR dev_status = 'Dump' and dev_name = 'centrl procesing unit' OR dev_status = 'Dump' and dev_name = 'central processing nit'
-  OR dev_status = 'Dump' and dev_name = 'cenRal processing unt' OR dev_status = 'Dump' and dev_name = 'cetral processin unit' OR dev_status = 'Dump' and dev_name = 'cetral_processin_unit'
-  OR dev_status = 'Dump' and dev_name = 'centralprocessingunit' OR dev_status = 'Dump' and dev_name = 'CENTRAL PROCESSING UNIT' OR dev_status = 'Dump' and dev_name = '(CPU)' 
-  OR dev_status = 'Dump' and dev_name = '(Central Processing unit (CPU))'
+  where status_asset = 'Dump' and type_asset = 'Central Processing unit (CPU)' OR status_asset = 'Dump' and type_asset = 'central processing unit'
+  OR status_asset = 'Dump' and type_asset = 'central_processing_unit' OR status_asset = 'Dump' and type_asset = 'cpu' OR status_asset = 'Dump' and type_asset = 'c_p_u' OR status_asset = 'Dump' and type_asset = 'c.p.u.'
+  OR status_asset = 'Dump' and type_asset = 'cntral prcessing unit' OR status_asset = 'Dump' and type_asset = 'centrl procesing unit' OR status_asset = 'Dump' and type_asset = 'central processing nit'
+  OR status_asset = 'Dump' and type_asset = 'cenRal processing unt' OR status_asset = 'Dump' and type_asset = 'cetral processin unit' OR status_asset = 'Dump' and type_asset = 'cetral_processin_unit'
+  OR status_asset = 'Dump' and type_asset = 'centralprocessingunit' OR status_asset = 'Dump' and type_asset = 'CENTRAL PROCESSING UNIT' OR status_asset = 'Dump' and type_asset = '(CPU)' 
+  OR status_asset = 'Dump' and type_asset = '(Central Processing unit (CPU))'
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>
@@ -519,12 +519,12 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 <?php	
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-  where dev_status = 'Dump' and dev_name = 'Power supply' OR dev_status = 'Dump' and dev_name = 'power supply' 
-  OR dev_status = 'Dump' and dev_name = 'pwer supply' OR dev_status = 'Dump' and dev_name = 'power spply' OR dev_status = 'Dump' and dev_name = 'pwer suply'
-  OR dev_status = 'Dump' and dev_name = 'poer Suply'  OR dev_status = 'Dump' and dev_name = 'powersupply' OR dev_status = 'Dump' and dev_name = 'power_supply'
-  OR dev_status = 'Dump' and dev_name = 'power.supply' OR dev_status = 'Dump' and dev_name = 'pwer.spply' OR dev_status = 'Dump' and dev_name = '(power supply)'
-  OR dev_status = 'Dump' and dev_name = '(powersupply)' OR dev_status = 'Dump' and dev_name = '(power_supply)'  OR dev_status = 'Dump' and dev_name = '(power-supply)'
-  OR dev_status = 'Dump' and dev_name = 'POWER SUPPLY'
+  where status_asset = 'Dump' and type_asset = 'Power supply' OR status_asset = 'Dump' and type_asset = 'power supply' 
+  OR status_asset = 'Dump' and type_asset = 'pwer supply' OR status_asset = 'Dump' and type_asset = 'power spply' OR status_asset = 'Dump' and type_asset = 'pwer suply'
+  OR status_asset = 'Dump' and type_asset = 'poer Suply'  OR status_asset = 'Dump' and type_asset = 'powersupply' OR status_asset = 'Dump' and type_asset = 'power_supply'
+  OR status_asset = 'Dump' and type_asset = 'power.supply' OR status_asset = 'Dump' and type_asset = 'pwer.spply' OR status_asset = 'Dump' and type_asset = '(power supply)'
+  OR status_asset = 'Dump' and type_asset = '(powersupply)' OR status_asset = 'Dump' and type_asset = '(power_supply)'  OR status_asset = 'Dump' and type_asset = '(power-supply)'
+  OR status_asset = 'Dump' and type_asset = 'POWER SUPPLY'
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>
@@ -556,11 +556,11 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 <?php	
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-  where dev_status = 'Dump' and dev_name = 'Video Graphic Accelerator (VGA)' OR dev_status = 'Dump' and dev_name = 'VGA' OR dev_status = 'Dump' and dev_name = '(VGA)'
-  OR dev_status = 'Dump' and dev_name = 'Video.Graphic.Accelerator' OR dev_status = 'Dump' and dev_name = 'Video-Graphic-Accelerator' OR dev_status = 'Dump' and dev_name = 'Video_Graphic_Accelerator'
-  OR dev_status = 'Dump' and dev_name = 'VideoGraphicAccelerator' OR dev_status = 'Dump' and dev_name = 'Video Graphic' OR dev_status = 'Dump' and dev_name = 'Vedio Graphic Acelerator' OR dev_status = 'Dump' and dev_name = 'VIDEO GRAPHIC ACCELATOR'
-  OR dev_status = 'Dump' and dev_name = 'VIDEO+GRAPHIC+ACCELATOR' OR dev_status = 'Dump' and dev_name = 'vido grphic' OR dev_status = 'Dump' and dev_name = 'viDo gRphic Accelarator'
-  OR dev_status = 'Dump' and dev_name = 'vedeo graphic' OR dev_status = 'Dump' and dev_name = 'video graphic accelerator'OR dev_status = 'Dump' and dev_name = 'vedio graphic accelerator'
+  where status_asset = 'Dump' and type_asset = 'Video Graphic Accelerator (VGA)' OR status_asset = 'Dump' and type_asset = 'VGA' OR status_asset = 'Dump' and type_asset = '(VGA)'
+  OR status_asset = 'Dump' and type_asset = 'Video.Graphic.Accelerator' OR status_asset = 'Dump' and type_asset = 'Video-Graphic-Accelerator' OR status_asset = 'Dump' and type_asset = 'Video_Graphic_Accelerator'
+  OR status_asset = 'Dump' and type_asset = 'VideoGraphicAccelerator' OR status_asset = 'Dump' and type_asset = 'Video Graphic' OR status_asset = 'Dump' and type_asset = 'Vedio Graphic Acelerator' OR status_asset = 'Dump' and type_asset = 'VIDEO GRAPHIC ACCELATOR'
+  OR status_asset = 'Dump' and type_asset = 'VIDEO+GRAPHIC+ACCELATOR' OR status_asset = 'Dump' and type_asset = 'vido grphic' OR status_asset = 'Dump' and type_asset = 'viDo gRphic Accelarator'
+  OR status_asset = 'Dump' and type_asset = 'vedeo graphic' OR status_asset = 'Dump' and type_asset = 'video graphic accelerator'OR status_asset = 'Dump' and type_asset = 'vedio graphic accelerator'
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>
@@ -593,10 +593,10 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
   where
-  dev_status = 'Dump' and dev_name = 'Power cords' OR dev_status = 'Dump' and dev_name = 'power cord' OR dev_status = 'Dump' and dev_name = 'power_cord'
-  OR dev_status = 'Dump' and dev_name = '(power cord)' OR dev_status = 'Dump' and dev_name = 'power.cord' OR dev_status = 'Dump' and dev_name = '(pwer crd)' OR dev_status = 'Dump' and dev_name = 'powr coRd'
-  OR dev_status = 'Dump' and dev_name = 'ower cord' OR dev_status = 'Dump' and dev_name = 'power cordss' OR dev_status = 'Dump' and dev_name = 'pwer crd' OR dev_status = 'Dump' and dev_name = 'POWER CORD'
-  OR dev_status = 'Dump' and dev_name = 'poer cd' OR dev_status = 'Dump' and dev_name = 'powe cor'OR dev_status = 'Dump' and dev_name = 'powercord'OR dev_status = 'Dump' and dev_name = 'power-cord'
+  status_asset = 'Dump' and type_asset = 'Power cords' OR status_asset = 'Dump' and type_asset = 'power cord' OR status_asset = 'Dump' and type_asset = 'power_cord'
+  OR status_asset = 'Dump' and type_asset = '(power cord)' OR status_asset = 'Dump' and type_asset = 'power.cord' OR status_asset = 'Dump' and type_asset = '(pwer crd)' OR status_asset = 'Dump' and type_asset = 'powr coRd'
+  OR status_asset = 'Dump' and type_asset = 'ower cord' OR status_asset = 'Dump' and type_asset = 'power cordss' OR status_asset = 'Dump' and type_asset = 'pwer crd' OR status_asset = 'Dump' and type_asset = 'POWER CORD'
+  OR status_asset = 'Dump' and type_asset = 'poer cd' OR status_asset = 'Dump' and type_asset = 'powe cor'OR status_asset = 'Dump' and type_asset = 'powercord'OR status_asset = 'Dump' and type_asset = 'power-cord'
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>	
@@ -629,14 +629,14 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 $count_item=mysql_query("select * from tbl_assets 
   LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
   where 
-  dev_status = 'Dump'    and dev_name = 'AVR'                          OR dev_status = 'Dump'     and dev_name = 'A.V.R' 
-  OR dev_status = 'Dump'    and dev_name = 'automatic Voltage Regulator'  OR dev_status = 'Dump'     and dev_name = 'automatic Voltage Reactor' 
-  OR dev_status = 'Dump'    and dev_name = 'automatic_Voltage_Regulator'  OR dev_status = 'Dump'     and dev_name = 'automatic-Voltage-Regulator' 
-  OR dev_status = 'Dump'    and dev_name = 'avrs'                         OR dev_status = 'Dump'     and dev_name = 'automatic v.r' 
-  OR dev_status = 'Dump'    and dev_name = 'automatic voltage R.'         OR dev_status = 'Dump'     and dev_name = 'avregulator' 
-  OR dev_status = 'Dump'    and dev_name = 'automatic Voltage Reactor'    OR dev_status = 'Dump'     and dev_name = 'automatic-Voltage-Reactor' 
-  OR dev_status = 'Dump'    and dev_name = 'automaticVoltageReactor'      OR dev_status = 'Dump'     and dev_name = 'automaticVoltageRegulator'
-  OR dev_status = 'Dump'    and dev_name = 'automtic Voltge Reactor'      OR dev_status = 'Dump'     and dev_name = 'automtic Voltge Regulator'
+  status_asset = 'Dump'    and type_asset = 'AVR'                          OR status_asset = 'Dump'     and type_asset = 'A.V.R' 
+  OR status_asset = 'Dump'    and type_asset = 'automatic Voltage Regulator'  OR status_asset = 'Dump'     and type_asset = 'automatic Voltage Reactor' 
+  OR status_asset = 'Dump'    and type_asset = 'automatic_Voltage_Regulator'  OR status_asset = 'Dump'     and type_asset = 'automatic-Voltage-Regulator' 
+  OR status_asset = 'Dump'    and type_asset = 'avrs'                         OR status_asset = 'Dump'     and type_asset = 'automatic v.r' 
+  OR status_asset = 'Dump'    and type_asset = 'automatic voltage R.'         OR status_asset = 'Dump'     and type_asset = 'avregulator' 
+  OR status_asset = 'Dump'    and type_asset = 'automatic Voltage Reactor'    OR status_asset = 'Dump'     and type_asset = 'automatic-Voltage-Reactor' 
+  OR status_asset = 'Dump'    and type_asset = 'automaticVoltageReactor'      OR status_asset = 'Dump'     and type_asset = 'automaticVoltageRegulator'
+  OR status_asset = 'Dump'    and type_asset = 'automtic Voltge Reactor'      OR status_asset = 'Dump'     and type_asset = 'automtic Voltge Regulator'
   ORDER BY tbl_assets.id DESC");
 $count = mysql_num_rows($count_item);
 ?>

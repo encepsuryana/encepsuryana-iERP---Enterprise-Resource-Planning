@@ -53,7 +53,7 @@
 					           <?php 
 								$new = mysql_query("select * from tbl_assets 
 								LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-								where dev_status = 'New' ORDER BY tbl_assets.id DESC")or die(mysql_error());
+								where status_asset = 'New' ORDER BY tbl_assets.id DESC")or die(mysql_error());
 								$new = mysql_num_rows($new);
 								?>
 								
@@ -76,7 +76,7 @@
 								<?php 
 								$damage = mysql_query("select * from tbl_assets 
 								LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
-								where dev_status = 'damage' OR dev_status = 'Damage' ORDER BY tbl_assets.id DESC")or die(mysql_error());
+								where status_asset = 'damage' OR status_asset = 'Damage' ORDER BY tbl_assets.id DESC")or die(mysql_error());
 								$damage = mysql_num_rows($damage);
 								?>
 								

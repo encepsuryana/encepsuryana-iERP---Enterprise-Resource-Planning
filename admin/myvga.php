@@ -34,59 +34,59 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'Video Graphic Accelerator (VGA)'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'Video Graphic Accelerator (VGA)'   and id_location = '$get_id' 
 				 OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'VGA'                         and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'VGA'                         and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = '(VGA)'                          and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = '(VGA)'                          and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video.Graphic.Accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video.Graphic.Accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video-Graphic-Accelerator'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video-Graphic-Accelerator'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video_Graphic_Accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video_Graphic_Accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'VideoGraphicAccelerator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'VideoGraphicAccelerator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video Graphic'               and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video Graphic'               and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Vedio Graphic Acelerator'       and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Vedio Graphic Acelerator'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'VIDEO GRAPHIC ACCELATOR'     and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'VIDEO GRAPHIC ACCELATOR'     and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'VIDEO+GRAPHIC+ACCELATOR'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'VIDEO+GRAPHIC+ACCELATOR'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'vido grphic'                 and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'vido grphic'                 and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'viDo gRphic Accelarator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'viDo gRphic Accelarator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'video graphic accelarator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'video graphic accelarator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'vedeo graphic'                  and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'vedeo graphic'                  and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'video graphic accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'video graphic accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'videographicaccelerator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'videographicaccelerator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'vedio graphic accelerator'   and id_location = '$get_id'")or die(mysql_error());
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'vedio graphic accelerator'   and id_location = '$get_id'")or die(mysql_error());
 				$count_my_device = mysql_num_rows($my_device);?>
 				VGA List: <span class="badge badge-info"><?php echo $count_my_device; ?></span>
 			</div>
@@ -112,7 +112,7 @@
                 LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id 
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
+                (select * from tbl_location_details where status_asset='Dump')
                  and id_location = '$get_id' ")or die(mysql_error());
 			    $count = mysql_num_rows($my_device);
 			    ?>
@@ -126,32 +126,32 @@
 	          LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 			  LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 			  where NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = 'Keyboard'  and id_location = '$get_id'
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = 'Keyboard'  and id_location = '$get_id'
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = 'keyboard'    and id_location = '$get_id'
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = 'keyboard'    and id_location = '$get_id'
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-		      and dev_name = 'kyboard'   and id_location = '$get_id' 
+             (select * from tbl_location_details where status_asset='Dump')
+		      and type_asset = 'kyboard'   and id_location = '$get_id' 
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = 'kboard'      and id_location = '$get_id'
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = 'kboard'      and id_location = '$get_id'
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = 'kbard'      and id_location = '$get_id' 
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = 'kbard'      and id_location = '$get_id' 
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = 'kbord'       and id_location = '$get_id' 
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = 'kbord'       and id_location = '$get_id' 
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = 'kbrd'      and id_location = '$get_id' 
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = 'kbrd'      and id_location = '$get_id' 
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = '(keyboard)'  and id_location = '$get_id' 
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = '(keyboard)'  and id_location = '$get_id' 
 			  OR NOT EXISTS 
-             (select * from tbl_location_details where dev_status='Dump')
-			  and dev_name = '(kbrd)'    and id_location = '$get_id' ")or die(mysql_error());
+             (select * from tbl_location_details where status_asset='Dump')
+			  and type_asset = '(kbrd)'    and id_location = '$get_id' ")or die(mysql_error());
 			  $count = mysql_num_rows($my_keyboard);
 			  ?>
               					
@@ -164,50 +164,50 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump') 
-			    and dev_name = 'Mouse'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump') 
+			    and type_asset = 'Mouse'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'mouse'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'mouse'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'muse'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'muse'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-               (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'mose'       and id_location = '$get_id' 
+               (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'mose'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'mse'       and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'mse'       and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'MOUSE'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'MOUSE'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(Mouse)'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(Mouse)'   and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse/PS2'  and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse/PS2'  and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse/USB' and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse/USB' and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse(PS2)' and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse(PS2)' and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse(USB)'and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse(USB)'and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse-PS2'  and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse-PS2'  and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse-USB' and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse-USB' and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse PS2'  and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse PS2'  and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Mouse USB' and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Mouse USB' and id_location = '$get_id' 
 				")or die(mysql_error());
 			    $count = mysql_num_rows($my_mouse);
                ?>
@@ -220,32 +220,32 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Monitor'     and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Monitor'     and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'monitor'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'monitor'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'montor'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'montor'   and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'monitr'    and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'monitr'    and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'mnitor'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'mnitor'   and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'mntr'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'mntr'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'MNTR'     and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'MNTR'     and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(monitor)' and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(monitor)' and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(montor)' and id_location = '$get_id' ")or die(mysql_error());
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(montor)' and id_location = '$get_id' ")or die(mysql_error());
 			    $count = mysql_num_rows($my_monitor);
                ?>
 			   
@@ -258,53 +258,53 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump') 
-			    and dev_name = 'Central Processing unit (CPU)'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump') 
+			    and type_asset = 'Central Processing unit (CPU)'   and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'central processing unit'          and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'central processing unit'          and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'central_processing_unit'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'central_processing_unit'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'cpu'       and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'cpu'       and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'c_p_u'                        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'c_p_u'                        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'c.p.u.'                           and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'c.p.u.'                           and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'cntral prcessing unit'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'cntral prcessing unit'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'centrl procesing unit'            and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'centrl procesing unit'            and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'central processing nit'       and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'central processing nit'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'cenRal processing unt'            and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'cenRal processing unt'            and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'cetral processin unit'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'cetral processin unit'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'cetral_processin_unit'            and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'cetral_processin_unit'            and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'centralprocessingunit'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'centralprocessingunit'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(CPU)'                            and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(CPU)'                            and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'CENTRAL PROCESSING UNIT'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'CENTRAL PROCESSING UNIT'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(Central Processing unit (CPU))'  and id_location = '$get_id' ")or die(mysql_error());
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(Central Processing unit (CPU))'  and id_location = '$get_id' ")or die(mysql_error());
 			    $count = mysql_num_rows($my_cpu);
                ?>
 				<li class="">			
@@ -316,50 +316,50 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Power Supply'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Power Supply'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'power supply'    and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'power supply'    and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'pwer supply'    and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'pwer supply'    and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'power spply'     and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'power spply'     and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'pwer suply'     and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'pwer suply'     and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'poer Suply'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'poer Suply'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'powersupply'    and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'powersupply'    and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'power_supply'    and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'power_supply'    and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'power.supply'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'power.supply'   and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'pwer.spply'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'pwer.spply'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = '(power supply)' and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = '(power supply)' and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(powersupply)'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(powersupply)'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(power_supply)' and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(power_supply)' and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(power-supply)'  and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(power-supply)'  and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'POWER SUPPLY'   and id_location = '$get_id' ")or die(mysql_error());
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'POWER SUPPLY'   and id_location = '$get_id' ")or die(mysql_error());
 			    $count = mysql_num_rows($my_power_supply);
                ?>			
 				<li class="">			
@@ -371,59 +371,59 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'Video Graphic Accelerator (VGA)'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'Video Graphic Accelerator (VGA)'   and id_location = '$get_id' 
 				 OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'VGA'                         and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'VGA'                         and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = '(VGA)'                          and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = '(VGA)'                          and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video.Graphic.Accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video.Graphic.Accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video-Graphic-Accelerator'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video-Graphic-Accelerator'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video_Graphic_Accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video_Graphic_Accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'VideoGraphicAccelerator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'VideoGraphicAccelerator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video Graphic'               and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video Graphic'               and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Vedio Graphic Acelerator'       and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Vedio Graphic Acelerator'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'VIDEO GRAPHIC ACCELATOR'     and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'VIDEO GRAPHIC ACCELATOR'     and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'VIDEO+GRAPHIC+ACCELATOR'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'VIDEO+GRAPHIC+ACCELATOR'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'vido grphic'                 and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'vido grphic'                 and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'viDo gRphic Accelarator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'viDo gRphic Accelarator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'video graphic accelarator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'video graphic accelarator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'vedeo graphic'                  and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'vedeo graphic'                  and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'video graphic accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'video graphic accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'videographicaccelerator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'videographicaccelerator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'vedio graphic accelerator'   and id_location = '$get_id'")or die(mysql_error());
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'vedio graphic accelerator'   and id_location = '$get_id'")or die(mysql_error());
 			    $count = mysql_num_rows($my_vga);
                ?>
 				<li class="active">			
@@ -435,53 +435,53 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump') 
-			    and dev_name = 'Power Cords'       and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump') 
+			    and type_asset = 'Power Cords'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump') 
-				and dev_name = 'power cord'    and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump') 
+				and type_asset = 'power cord'    and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump') 
-			    and dev_name = 'power_cord'     and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump') 
+			    and type_asset = 'power_cord'     and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(power cord)'  and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(power cord)'  and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'power.cord'     and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'power.cord'     and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = '(pwer crd)'    and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = '(pwer crd)'    and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'powr coRd'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'powr coRd'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'ower cord'     and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'ower cord'     and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'power cordss'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'power cordss'   and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'pwer crd'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'pwer crd'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'POWER CORD'     and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'POWER CORD'     and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'poer cd'       and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'poer cd'       and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'powe cor'       and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'powe cor'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'powercord'     and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'powercord'     and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'powe cor'       and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'powe cor'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'power-cord'    and id_location = '$get_id'")or die(mysql_error());
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'power-cord'    and id_location = '$get_id'")or die(mysql_error());
 			    $count = mysql_num_rows($my_vga);
                ?>				
 				<li class="">			
@@ -493,53 +493,53 @@
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				 and dev_name = 'AVR'                           and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				 and type_asset = 'AVR'                           and id_location = '$get_id'
 				 OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				 and dev_name = 'A.V.R'                          and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				 and type_asset = 'A.V.R'                          and id_location = '$get_id'
 				 OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'automatic Voltage Regulator'   and id_location = '$get_id'   
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'automatic Voltage Regulator'   and id_location = '$get_id'   
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'automatic Voltage Reactor'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'automatic Voltage Reactor'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'automatic_Voltage_Regulator'   and id_location = '$get_id'   
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'automatic_Voltage_Regulator'   and id_location = '$get_id'   
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'automatic-Voltage-Regulator'    and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'automatic-Voltage-Regulator'    and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'avrs'                          and id_location = '$get_id'   
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'avrs'                          and id_location = '$get_id'   
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'automatic v.r'                  and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'automatic v.r'                  and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'automatic voltage R.'          and id_location = '$get_id'   
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'automatic voltage R.'          and id_location = '$get_id'   
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'avregulator'                    and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'avregulator'                    and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'automatic Voltage Reactor'     and id_location = '$get_id'   
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'automatic Voltage Reactor'     and id_location = '$get_id'   
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'automatic-Voltage-Reactor'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'automatic-Voltage-Reactor'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'automaticVoltageReactor'       and id_location = '$get_id'   
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'automaticVoltageReactor'       and id_location = '$get_id'   
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'automaticVoltageRegulator'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'automaticVoltageRegulator'      and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-                and dev_name = 'automtic Voltge Reactor'       and id_location = '$get_id'   
+                (select * from tbl_location_details where status_asset='Dump')
+                and type_asset = 'automtic Voltge Reactor'       and id_location = '$get_id'   
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'automtic Voltge Regulator'      and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'automtic Voltge Regulator'      and id_location = '$get_id'
 			    ")or die(mysql_error());
 			    $count = mysql_num_rows($my_avr);
                ?>				
@@ -559,7 +559,7 @@
 		<thead>		
 		        <tr>			        
 					<th class="empty"></th>
-					<th>Device Name</th>
+					<th>Tipe Aset</th>
 					<th>Device Description </th>
 					<th>Inventory Code</th>
 			        <th>Device Brand  </th>
@@ -577,59 +577,59 @@ $my_device = mysql_query("select * from tbl_location_details
 	            LEFT JOIN tbl_assets ON tbl_location_details.id = tbl_assets.id
 				LEFT JOIN tbl_asset_type ON tbl_assets.id_asset=tbl_asset_type.id_asset
 				where NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'Video Graphic Accelerator (VGA)'   and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'Video Graphic Accelerator (VGA)'   and id_location = '$get_id' 
 				 OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'VGA'                         and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'VGA'                         and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = '(VGA)'                          and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = '(VGA)'                          and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video.Graphic.Accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video.Graphic.Accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video-Graphic-Accelerator'      and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video-Graphic-Accelerator'      and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video_Graphic_Accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video_Graphic_Accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'VideoGraphicAccelerator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'VideoGraphicAccelerator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Video Graphic'               and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Video Graphic'               and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'Vedio Graphic Acelerator'       and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'Vedio Graphic Acelerator'       and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'VIDEO GRAPHIC ACCELATOR'     and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'VIDEO GRAPHIC ACCELATOR'     and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'VIDEO+GRAPHIC+ACCELATOR'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'VIDEO+GRAPHIC+ACCELATOR'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'vido grphic'                 and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'vido grphic'                 and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'viDo gRphic Accelarator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'viDo gRphic Accelarator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'video graphic accelarator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'video graphic accelarator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-			    and dev_name = 'vedeo graphic'                  and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+			    and type_asset = 'vedeo graphic'                  and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'video graphic accelerator'   and id_location = '$get_id'
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'video graphic accelerator'   and id_location = '$get_id'
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'videographicaccelerator'        and id_location = '$get_id' 
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'videographicaccelerator'        and id_location = '$get_id' 
 				OR NOT EXISTS 
-                (select * from tbl_location_details where dev_status='Dump')
-				and dev_name = 'vedio graphic accelerator'   and id_location = '$get_id'")or die(mysql_error());
+                (select * from tbl_location_details where status_asset='Dump')
+				and type_asset = 'vedio graphic accelerator'   and id_location = '$get_id'")or die(mysql_error());
 while($row = mysql_fetch_array($my_device)){
 $id = $row['id'];
 		                                               
@@ -638,26 +638,26 @@ $id = $row['id'];
 		<td><?php
 			   $device_query2 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query2);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			   else if($row['dev_status']=='Repaired')
+			   else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?>
 		</td>
-			<td><?php echo $row['dev_name']; ?></td>
-			<td><?php echo $row['dev_desc']; ?></td>
+			<td><?php echo $row['type_asset']; ?></td>
+			<td><?php echo $row['desc_asset']; ?></td>
 			<td><?php echo $row['dev_serial']; ?></td>
 			<td><?php echo $row['dev_brand']; ?></td>
 			<td><?php echo $row['dev_model']; ?></td>
@@ -665,21 +665,21 @@ $id = $row['id'];
 			<td><?php
 			   $my_device1 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($my_device1);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			    else if($row['dev_status']=='Repaired')
+			    else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?></td>
 			<td><?php echo $location_row['stdev_location_name']; ?></td>

@@ -48,17 +48,17 @@
 									 <form class="form-horizontal" method="post">
 									 
 									   <div class="control-group">
-											<label class="control-label" for="inputEmail">Device Name</label>
+											<label class="control-label" for="inputEmail">Tipe Aset</label>
 											<div class="controls">			
 												<select id="qtype" name="id_asset" readonly="readonly" required>
 
-													<option value="<?php echo $row['id_asset']; ?>" ><?php echo $row['dev_name']; ?></option>
+													<option value="<?php echo $row['id_asset']; ?>" ><?php echo $row['type_asset']; ?></option>
 													<?php
 													$device_query = mysql_query("select * from tbl_asset_type")or die(mysql_error());
 													while($query_device_row = mysql_fetch_array($device_query)){
-													$dev_name = $row['dev_name'];
+													$type_asset = $row['type_asset'];
 													?>
-													<option value="<?php echo $query_device_row['id_asset']; ?>"><?php echo $query_device_row['dev_name'];  ?></option>
+													<option value="<?php echo $query_device_row['id_asset']; ?>"><?php echo $query_device_row['type_asset'];  ?></option>
 													<?php } ?>
 
 												</select>
@@ -103,7 +103,7 @@
 													id_location = '$id_location'													
 													where id = '$get_id' ")or die(mysql_error());
 													
-										mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','transfer Device  $dev_name to location id $id_location')")or die(mysql_error());			
+										mysql_query("insert into activity_log (date,user_admin,action) values(NOW(),'$admin_username','transfer Device  $type_asset to location id $id_location')")or die(mysql_error());			
 										?>
 										<script>
 										window.location = "mydevice.php<?php echo '?id_location='.$id_location; ?>"; 

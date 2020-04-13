@@ -1,7 +1,7 @@
 <?php include('header_dashboard.php'); ?>
 <?php include('session.php'); ?>
 <?php
-$dev_name = $_POST['dev_name'];
+$type_asset = $_POST['type_asset'];
 $dev_serial = $_POST['dev_serial'];
 ?>
     <body id="home">
@@ -24,7 +24,7 @@ $dev_serial = $_POST['dev_serial'];
 		                     LEFT JOIN tbl_location_details ON tbl_assets.id = tbl_location_details.id		
 		                     LEFT JOIN tbl_location ON tbl_location_details.id_location = tbl_location.id_location
 							 LEFT JOIN tbl_asset_type ON tbl_assets.id_asset = tbl_asset_type.id_asset
-		                     where dev_name LIKE '%$dev_name%'							
+		                     where type_asset LIKE '%$type_asset%'							
 							 and dev_serial LIKE '%$dev_serial%'");
 	             $count = mysql_num_rows($count_item);
                  ?>	 
@@ -53,7 +53,7 @@ $dev_serial = $_POST['dev_serial'];
 		<thead>		
 		        <tr>			        
 					<th class="empty"></th>
-					<th>Device Name</th>
+					<th>Tipe Aset</th>
 					<th>Device Description </th>
 					<th>Device Serial Number  </th>
 			        <th>Device Brand  </th>
@@ -69,7 +69,7 @@ $dev_serial = $_POST['dev_serial'];
 		LEFT JOIN tbl_location_details ON tbl_assets.id = tbl_location_details.id		
 		LEFT JOIN tbl_location ON tbl_location_details.id_location = tbl_location.id_location
 		LEFT JOIN tbl_asset_type ON tbl_assets.id_asset = tbl_asset_type.id_asset
-		where dev_name LIKE '%$dev_name%' 		
+		where type_asset LIKE '%$type_asset%' 		
 		and dev_serial LIKE '%$dev_serial%'")or die(mysql_error());
 		while($row = mysql_fetch_array($search_query)){
 		$id = $row['id'];
@@ -80,47 +80,47 @@ $dev_serial = $_POST['dev_serial'];
 		<td><?php
 			   $device_query2 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query2);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-check"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-ok"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			   else if($row['dev_status']=='Repaired')
+			   else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-wrench"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<i class="icon-remove-sign"></i><div id="hide"><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?>
 		</td>
-			<td><?php echo $row['dev_name']; ?></td>
-			<td><?php echo $row['dev_desc']; ?></td>
+			<td><?php echo $row['type_asset']; ?></td>
+			<td><?php echo $row['desc_asset']; ?></td>
 			<td><?php echo $row['dev_serial']; ?></td>
 			<td><?php echo $row['dev_brand']; ?></td>
 			<td><?php echo $row['dev_model']; ?></td>
 			<td><?php
 			   $device_query1 = mysql_query("select * from tbl_assets ")or die(mysql_error());
 		       $dev=mysql_fetch_assoc($device_query1);
-		       if($row['dev_status']=='New')
+		       if($row['status_asset']=='New')
 		       {
-			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-success"><i class="icon-check"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-		       else if($row['dev_status']=='Used')
+		       else if($row['status_asset']=='Used')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-ok"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
-			   else if($row['dev_status']=='Repaired')
+			   else if($row['status_asset']=='Repaired')
 			   {
-			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-warning"><i class="icon-wrench"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       }
 		       else
 			   {
-			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['dev_status'].'</strong></div>';
+			   echo '<div class="alert alert-danger"><i class="icon-remove-sign"></i><strong>'.$row['status_asset'].'</strong></div>';
 		       };
 			  ?></td>
 			<td><?php echo $row['stdev_location_name']; ?></td>												
