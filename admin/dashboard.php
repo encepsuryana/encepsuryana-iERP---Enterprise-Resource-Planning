@@ -68,7 +68,7 @@
                       <div class="span3"><br/>
                         <i class="fa fa-share-square fa-3x"></i><br/>
                       </div>
-                      <a href="used_device.php">   
+                      <a href="used_assets.php">   
                         <div class="span8 text-right">
                           <div class="text-small">Total Aset Digunakan</div>
                           <div class="huge"><?php echo $used;?></div>

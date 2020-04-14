@@ -508,7 +508,7 @@
 				<th class="empty"></th>
 					<th>Tipe Aset</th>
 					<th>Device Description </th>
-					<th>Inventory Code</th>
+					<th>Kode Asset</th>
 			        <th>Device Brand  </th>
 					<th>Device Model  </th>
 					<th>Device Status  </th>	                 					

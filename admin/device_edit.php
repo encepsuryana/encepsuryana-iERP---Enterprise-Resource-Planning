@@ -67,7 +67,7 @@
 								</div>
 
 								<div class="control-group">
-									<label class="control-label" for="inputPassword">Inventory Code</label>
+									<label class="control-label" for="inputPassword">Kode Asset</label>
 									<div class="controls">
 										<input type="text" class="span8" value="<?php echo $row['dev_serial']; ?>" name="dev_serial" id="inputPassword" placeholder="Device Serial Number" required>
 									</div>
